@@ -61,12 +61,6 @@ build CMakeFiles/src.dir/Menu.cpp.obj: CXX_COMPILER__src_Debug C$:/universidade/
   OBJECT_DIR = CMakeFiles\src.dir
   OBJECT_FILE_DIR = CMakeFiles\src.dir
 
-build CMakeFiles/src.dir/Horario.cpp.obj: CXX_COMPILER__src_Debug C$:/universidade/aed/feup-aed-proj1/src/Horario.cpp || cmake_object_order_depends_target_src
-  DEP_FILE = CMakeFiles\src.dir\Horario.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\src.dir
-  OBJECT_FILE_DIR = CMakeFiles\src.dir
-
 build CMakeFiles/src.dir/Estudante.cpp.obj: CXX_COMPILER__src_Debug C$:/universidade/aed/feup-aed-proj1/src/Estudante.cpp || cmake_object_order_depends_target_src
   DEP_FILE = CMakeFiles\src.dir\Estudante.cpp.obj.d
   FLAGS = -g -std=gnu++14
@@ -85,6 +79,18 @@ build CMakeFiles/src.dir/Aula.cpp.obj: CXX_COMPILER__src_Debug C$:/universidade/
   OBJECT_DIR = CMakeFiles\src.dir
   OBJECT_FILE_DIR = CMakeFiles\src.dir
 
+build CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj: CXX_COMPILER__src_Debug C$:/universidade/aed/feup-aed-proj1/src/LogisticaDeTurmas.cpp || cmake_object_order_depends_target_src
+  DEP_FILE = CMakeFiles\src.dir\LogisticaDeTurmas.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\src.dir
+  OBJECT_FILE_DIR = CMakeFiles\src.dir
+
+build CMakeFiles/src.dir/GestaoDeTransferencia.cpp.obj: CXX_COMPILER__src_Debug C$:/universidade/aed/feup-aed-proj1/src/GestaoDeTransferencia.cpp || cmake_object_order_depends_target_src
+  DEP_FILE = CMakeFiles\src.dir\GestaoDeTransferencia.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\src.dir
+  OBJECT_FILE_DIR = CMakeFiles\src.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target src
@@ -93,7 +99,7 @@ build CMakeFiles/src.dir/Aula.cpp.obj: CXX_COMPILER__src_Debug C$:/universidade/
 #############################################
 # Link the executable src.exe
 
-build src.exe: CXX_EXECUTABLE_LINKER__src_Debug CMakeFiles/src.dir/main.cpp.obj CMakeFiles/src.dir/Menu.cpp.obj CMakeFiles/src.dir/Horario.cpp.obj CMakeFiles/src.dir/Estudante.cpp.obj CMakeFiles/src.dir/Turma.cpp.obj CMakeFiles/src.dir/Aula.cpp.obj
+build src.exe: CXX_EXECUTABLE_LINKER__src_Debug CMakeFiles/src.dir/main.cpp.obj CMakeFiles/src.dir/Menu.cpp.obj CMakeFiles/src.dir/Estudante.cpp.obj CMakeFiles/src.dir/Turma.cpp.obj CMakeFiles/src.dir/Aula.cpp.obj CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj CMakeFiles/src.dir/GestaoDeTransferencia.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\src.dir
