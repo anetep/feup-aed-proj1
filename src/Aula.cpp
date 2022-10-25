@@ -4,16 +4,12 @@
 
 #include "Aula.h"
 
-int Aula::getUcCode() {
-    return ucCode_;
-}
+string Aula::getUcCode() {return ucCode_;}
 
-int Aula::getWeekday() {return weekday_;}
+string Aula::getWeekday() {return weekday_;}
 
 float Aula::getStartHour() {return startHour_;}
 
 float Aula::getDuration() {return duration_;}
 
-void Aula::getEndHour() {
-    return startHour_ + duration_;
-}
+float Aula::getEndHour() {return startHour_ + duration_;}
