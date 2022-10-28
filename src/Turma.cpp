@@ -3,3 +3,12 @@
 //
 
 #include "Turma.h"
+
+string Turma::getClassCode(){
+    return classCode;
+}
+
+
+int Turma::getClassCapacity(){
+    return classCapacity;
+}

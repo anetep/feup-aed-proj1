@@ -6,3 +6,7 @@
 1	154	6886509936736306	build.ninja	8aabef3f90847a16
 2	60	6879841702878169	CMakeFiles/src.dir/Menu.cpp.obj	ce42cfedc6d87287
 16	70	6879848137636958	CMakeFiles/src.dir/Turma.cpp.obj	a0e25aafe10718f9
+26	157	6883554918888962	CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj	2002d0c77c0f12c9
+31	159	6883554918888962	CMakeFiles/src.dir/GestaoDeTransferencia.cpp.obj	256784002bea53e8
+4	448	6883554921850219	CMakeFiles/src.dir/main.cpp.obj	52b236a1c9e9c05
+22	450	6883554921860218	CMakeFiles/src.dir/Estudante.cpp.obj	de2dd6c928ab55ec
