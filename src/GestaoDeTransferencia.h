@@ -13,8 +13,6 @@ private:
     //changeRequest
 
 public:
-    
-    /* Atributo ChangeRequesta ainda não foi usado em nenhum função, implementar isto depois*/
 
     GestaoDeTransferencia();
     GestaoDeTransferencia(string oldClass, string newClass /*, changeRequest*/);
