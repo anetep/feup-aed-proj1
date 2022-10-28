@@ -11,21 +11,22 @@
 using namespace std;
 
 class Estudante {
+
 private:
-
-    /**
-     * \brief Número do estudante.
-     */
     int studentCode;
-
-    /**
-     * \brief Nome do estudante.
-     */
     string studentName;
 
 public:
 
+    Estudante();
 
+    Estudante(int studentCode, string studentName);
+
+    string getStudentCode();
+    string getStudentName();
+
+    void setStudentName(string name);
+    void setStudentCode(int code);
 };
 
 
