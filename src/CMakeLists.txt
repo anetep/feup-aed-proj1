@@ -3,4 +3,4 @@ project(src)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(src main.cpp Menu.cpp Menu.h Estudante.cpp Estudante.h Turma.cpp Turma.h Aula.cpp Aula.h LogisticaDeTurmas.cpp LogisticaDeTurmas.h GestaoDeTransferencia.cpp GestaoDeTransferencia.h BinarySearchTree.h BinarySearchTree.cpp)
+add_executable(src main.cpp Menu.cpp Menu.h Estudante.cpp Estudante.h Turma.cpp Turma.h Aula.cpp Aula.h LogisticaDeTurmas.cpp LogisticaDeTurmas.h GestaoDeTransferencia.cpp GestaoDeTransferencia.h BinarySearchTree.h BinarySearchTree.cpp Schedule.cpp Schedule.h)
