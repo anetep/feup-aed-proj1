@@ -8,9 +8,9 @@
 #ifndef SRC_AULA_H
 #define SRC_AULA_H
 
-#include <string>
-#include <iostream>
 
+#include <iostream>
+#include <string>
 using namespace std;
 
 class Aula {
