@@ -4,7 +4,7 @@
 
 #include "Aula.h"
 
-string Aula::getUcCode() {return ucCode_;}
+string Aula::getUcCode() {return ucCode_;} //get Uc code
 
 string Aula::getWeekday() {return weekday_;}
 
