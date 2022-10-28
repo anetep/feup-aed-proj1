@@ -3,7 +3,6 @@
 1	305	6879824818925540	CMakeFiles/src.dir/main.cpp.obj	52b236a1c9e9c05
 12	64	6879848137583360	CMakeFiles/src.dir/Estudante.cpp.obj	de2dd6c928ab55ec
 8	65	6879848137583360	CMakeFiles/src.dir/Aula.cpp.obj	c1d7b1967b074b54
-1	154	6881383145116413	build.ninja	8aabef3f90847a16
+1	154	6886509936736306	build.ninja	8aabef3f90847a16
 2	60	6879841702878169	CMakeFiles/src.dir/Menu.cpp.obj	ce42cfedc6d87287
-3	63	6879848137571860	CMakeFiles/src.dir/Horario.cpp.obj	dcfc8c5d595b3fcb
 16	70	6879848137636958	CMakeFiles/src.dir/Turma.cpp.obj	a0e25aafe10718f9
