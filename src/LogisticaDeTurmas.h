@@ -6,8 +6,22 @@
 #define SRC_LOGISTICADETURMAS_H
 
 
-class LogisticaDeTurmas {
+#include "Estudante.h"
+#include "Turma.h"
+#include <list>
 
+
+
+class LogisticaDeTurmas {
+private:
+public:
+    list <Estudante> getAllStudents();
+    list <Turma> getAllClasses();
+    list <Aula> getStudentShedule(int studentCode);
+    list <Estudante> getStudentsPerClass(string classCode);
+    list <Estudante> getStudentsPerUcs(string usCode);
+    list <Estudante> getStudentsInYearN(int year);
+    // list <Estudante> getStudentsWithMoreThanNUcs(int n);
 };
 
 
