@@ -22,7 +22,7 @@ public:
 
     Estudante(int studentCode, string studentName);
 
-    string getStudentCode();
+    int getStudentCode();
     string getStudentName();
 
     void setStudentName(string name);
