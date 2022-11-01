@@ -71,4 +71,4 @@ public:
 };
 
 
-#endif //SRC_AULA_
+#endif //SRC_AULA_H
