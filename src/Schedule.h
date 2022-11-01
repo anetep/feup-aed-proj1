@@ -20,6 +20,9 @@ private:
     list<Aula> Aulas;
 
 public:
+    Schedule();
+
+
     list<Estudante> getEstudantes();
 
     list<Turma> getTurmas();
