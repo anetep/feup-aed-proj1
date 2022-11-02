@@ -5,11 +5,11 @@
 #include "Aula.h"
 
 Aula::Aula(){
-    string ucCode_ = "";
-    string weekday_ = "";
-    float startHour_ = 0;
-    float duration_ = 0;
-    string type_ = "";
+    this->ucCode_ = "";
+    this->weekday_ = "";
+    this->startHour_ = 0;
+    this->duration_ = 0;
+    this->type_ = "";
 }
 
 Aula::Aula(const string &uc, const string &wkd,const float &sh,const float &d,const string &t){
