@@ -3,20 +3,19 @@
 //
 
 #include "ReadFiles.h"
-#include "Estudante.h"
 
-Estudante student;
+
 using namespace std;
 
-vector<pair<int, string>> ReadFiles::readStudentsFile(){
+// retorna um vector com todos os estudantes do ficheiro
+vector<Estudante> ReadFiles::readStudentsFile() const{
     ifstream in("helper.txt");
 
     string line;
     string word;
-    string delimiter = ",";  // para pegar cada número
+    string delimiter = ",";  // para pegar cada atributo separadamente
 
-    pair<int, string> oneStudent;
-    vector <pair<int, string>> all;
+    vector <Estudante> all;
 
     if (in.is_open()){
         getline(in, line); // para saltar a 1a linha
@@ -25,14 +24,15 @@ vector<pair<int, string>> ReadFiles::readStudentsFile(){
             string newSub = line.substr(line.find(delimiter) + 1, line.length() - 1);
             string studentName = newSub.substr(0, newSub.find(delimiter));
             int studentNum = stoi(n);
-            oneStudent.first = studentNum;
-            oneStudent.second = studentName;
+            Estudante oneStudent(studentNum, studentName);
             all.push_back(oneStudent);
         }
     } else{
         cerr << "Nao existe nenhum ficheiro de estudantes com o nome dado" << endl;
     }
-    in.close();
 
+    in.close();
     return all;
 }
+
+

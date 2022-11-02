@@ -16,10 +16,10 @@ Estudante::Estudante(const int &sc,const string &sn){
     this->studentName = sn;
 }
 
-int Estudante::getStudentCode() {return studentCode;}
-string Estudante::getStudentName() {return studentName;}
+int Estudante::getStudentCode() const {return studentCode;}
+string Estudante::getStudentName() const{return studentName;}
 
-void Estudante::setStudentName(string name) {this->studentName = name;}
+void Estudante::setStudentName(const string name) {this->studentName = name;}
 void Estudante::setStudentCode(int code) {this->studentCode = code;}
 
 

@@ -27,17 +27,17 @@ public:
 
     Aula(const string &ucCode_, const string &weekday_,const float &startHour_,const float &duration_,const string &type_);
 
-    string getUcCode();
+    string getUcCode() const;
 
-    string getWeekday();
+    string getWeekday() const;
 
-    float getStartHour();
+    float getStartHour() const;
 
-    float getDuration();
+    float getDuration() const;
 
-    float getEndHour();
+    float getEndHour() const;
 
-    string getTypeOfClass();
+    string getTypeOfClass() const;
 };
 
 

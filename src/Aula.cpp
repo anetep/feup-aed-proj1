@@ -21,15 +21,15 @@ Aula::Aula(const string &uc, const string &wkd,const float &sh,const float &d,co
 }
 
 
-string Aula::getUcCode() {return ucCode_;} //get Uc code
+string Aula::getUcCode() const {return ucCode_;} //get Uc code
 
-string Aula::getWeekday() {return weekday_;}
+string Aula::getWeekday() const {return weekday_;}
 
-float Aula::getStartHour() {return startHour_;}
+float Aula::getStartHour() const {return startHour_;}
 
-float Aula::getDuration() {return duration_;}
+float Aula::getDuration() const {return duration_;}
 
-float Aula::getEndHour() {return startHour_ + duration_;}
+float Aula::getEndHour() const {return startHour_ + duration_;}
 
-string Aula::getTypeOfClass(){return type_;}
+string Aula::getTypeOfClass() const {return type_;}
 

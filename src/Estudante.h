@@ -26,9 +26,9 @@ public:
 
     Estudante(const int &studentCode,const string &studentName);
 
-    int getStudentCode();
+    int getStudentCode() const;
 
-    string getStudentName();
+    string getStudentName() const;
 
     void setStudentName(string name);
 
