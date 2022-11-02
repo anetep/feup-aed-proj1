@@ -9,7 +9,7 @@ Estudante student;
 using namespace std;
 
 vector<pair<int, string>> ReadFiles::readStudentsFile(){
-    ifstream in("helper.txt");
+    ifstream in("students_classes.txt");
 
     string line;
     string word;
