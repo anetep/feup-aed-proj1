@@ -5,8 +5,11 @@
 #include "Aula.h"
 #include "Estudante.h"
 #include "ReadFiles.h"
+#include "Menu.h"
 #include <list>
 #include <set>
+#include <string>
+
 
 
 int main() {
@@ -20,13 +23,15 @@ int main() {
     //student.printAllStudents();
 
     int escolha1;
-    cout << "1. Listing de estudantes\n";
-    cout << "2. Adicionar Estudante\n";
-    cout << "3. Apagar estudante\n";
-    cout << endl;
+    cout << "O. Sair"<< endl<<"1. Listing de estudantes TESTE" << endl;
+    cout << "2. Adicionar Estudante" << endl<< "3. Apagar estudante"<< endl;
+    cout << "4. Listing de Estudantes"<<endl;
     cout << "Escolha uma das opcoes! "; cin >> escolha1;
 
     switch (escolha1) {
+        case 0:
+            cout<< "Obrigado!";
+            return 0;
         case 1:
             cout << "escolheu: 1.Listing de estuantes\n";
             cout << "-------------------------\n";
@@ -41,6 +46,9 @@ int main() {
             cout << "escolheu: 3.Apagar estudante\n";
             cout << "-------------------------\n";
             cout << "nao ha nada";
+            break;
+        case 4:
+            cout<< "Direcionar para menu...";
             break;
         default:
             cout << "escolha uma das opcoes!!";
