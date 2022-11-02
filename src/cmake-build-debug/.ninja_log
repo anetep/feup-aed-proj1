@@ -1,18 +1,12 @@
 # ninja log v5
-4	448	6883554921850219	CMakeFiles/src.dir/main.cpp.obj	52b236a1c9e9c05
+40	519	6890033653605862	CMakeFiles/src.dir/BinarySearchTree.cpp.obj	424871290cb653cb
+3	413	6890033652535745	CMakeFiles/src.dir/main.cpp.obj	52b236a1c9e9c05
 70	178	6879848138691171	src.exe	edfbf7b9114d070f
-22	450	6883554921860218	CMakeFiles/src.dir/Estudante.cpp.obj	de2dd6c928ab55ec
-17	734	6886691923165225	CMakeFiles/src.dir/Aula.cpp.obj	c1d7b1967b074b54
-1	154	6890033588437892	build.ninja	8aabef3f90847a16
-2	60	6879841702878169	CMakeFiles/src.dir/Menu.cpp.obj	ce42cfedc6d87287
-37	737	6886691923207973	CMakeFiles/src.dir/Turma.cpp.obj	a0e25aafe10718f9
-27	739	6886691923228146	CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj	2002d0c77c0f12c9
-31	159	6883554918888962	CMakeFiles/src.dir/GestaoDeTransferencia.cpp.obj	256784002bea53e8
-9	95	6890033649356377	CMakeFiles/src.dir/Menu.cpp.obj	ce42cfedc6d87287
 13	398	6890033652382859	CMakeFiles/src.dir/Estudante.cpp.obj	de2dd6c928ab55ec
 23	400	6890033652392844	CMakeFiles/src.dir/Aula.cpp.obj	c1d7b1967b074b54
-3	413	6890033652535745	CMakeFiles/src.dir/main.cpp.obj	52b236a1c9e9c05
+1	154	6890506684182046	build.ninja	8aabef3f90847a16
+9	95	6890033649356377	CMakeFiles/src.dir/Menu.cpp.obj	ce42cfedc6d87287
 34	475	6890033653150747	CMakeFiles/src.dir/Turma.cpp.obj	a0e25aafe10718f9
 29	491	6890033653321331	CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj	2002d0c77c0f12c9
-40	519	6890033653605862	CMakeFiles/src.dir/BinarySearchTree.cpp.obj	424871290cb653cb
+31	159	6883554918888962	CMakeFiles/src.dir/GestaoDeTransferencia.cpp.obj	256784002bea53e8
 7	60	6890038970576543	CMakeFiles/src.dir/Schedule.cpp.obj	ceb0084be634c314
