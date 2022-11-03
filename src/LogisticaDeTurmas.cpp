@@ -14,6 +14,10 @@ bool compareStudentsNums(Estudante &x, Estudante &y) {
 bool compareClassesCode(Turma &x, Turma &y) {
     return x.getClassCode() < y.getClassCode();
 }
+
+bool compareUcsCode(Turma &x, Turma &y) {
+    return x.getUcCode() < y.getUcCode();
+}
 // ==============================================================
 // Funções para eliminar duplicados
 
@@ -43,6 +47,24 @@ vector<Turma> LogisticaDeTurmas::removeDuplicateClassCode(vector<Turma> &aulas) 
     vector<Turma> newA;
     while (size) {
         if (aulas[i].getClassCode() == aulas[i + 1].getClassCode()) {
+            size--;
+            i++;
+        }
+        else {
+            size--;
+            newA.push_back(aulas[i]);
+            i++;
+        }
+    }
+    return newA;
+}
+
+vector<Turma> LogisticaDeTurmas::removeDuplicateUcCode(vector<Turma> &aulas) {
+    int i = 0;
+    int size = aulas.size();
+    vector<Turma> newA;
+    while (size) {
+        if (aulas[i].getUcCode() == aulas[i + 1].getUcCode()) {
             size--;
             i++;
         }
@@ -88,7 +110,7 @@ void LogisticaDeTurmas::printAllClasses(){
 
     sort(allClasses.begin(), allClasses.end(), compareClassesCode);
 
-    cout << "All Classes availables in the system" << endl;
+    cout << "All Classes available in the system" << endl;
     cout << "---------------------------" << endl;
 
     vector<Turma> uniqueClasses = removeDuplicateClassCode(allClasses);
@@ -101,5 +123,16 @@ void LogisticaDeTurmas::printAllClasses(){
 
 void LogisticaDeTurmas::printAllUcs(){
     ReadFiles o;
-    vector<Turma> allUcs = o.readClassesPerUcFile();
+    vector<Turma> allClasses = o.readClassesPerUcFile();
+
+    sort(allClasses.begin(), allClasses.end(), compareUcsCode);
+
+    cout << "All UCs available in the system" << endl;
+    cout << "---------------------------" << endl;
+
+    vector<Turma> uniqueClasses = removeDuplicateUcCode(allClasses);
+
+    for (const auto &cl : uniqueClasses){
+        cout << cl.getUcCode() << endl;
+    }
 }
