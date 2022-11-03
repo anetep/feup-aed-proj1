@@ -9,23 +9,26 @@ using namespace std;
 
 // retorna um vector com todos os estudantes do ficheiro
 vector<Estudante> ReadFiles::readStudentsFile(){
-    ifstream in("helper.txt");
+    ifstream in("helper_students.txt");
 
     string line;
-    string word;
-    string delimiter = ",";  // para pegar cada atributo separadamente
+    char* dup;
 
     vector <Estudante> all;
 
     if (in.is_open()){
         getline(in, line); // para saltar a 1a linha
         while (getline(in, line)){
-            string n = line.substr(0, line.find(delimiter));
-            string newSub = line.substr(line.find(delimiter) + 1, line.length() - 1);
-            string studentName = newSub.substr(0, newSub.find(delimiter));
-            int studentNum = stoi(n);
-            Estudante oneStudent(studentNum, studentName);
-            all.push_back(oneStudent);
+            dup = strdup(line.c_str());
+            int studentNum = atoi(strtok(dup, ","));
+            string studentName = strtok(NULL, ",");
+            string ucCode = strtok(NULL, ",");
+            string classCode = strtok(NULL, ",");
+            Turma t(ucCode,classCode);
+            list<Turma> for_est;
+            for_est.push_back(t);
+            Estudante s(studentNum, studentName, for_est);
+            all.push_back(s);
         }
     } else{
         cerr << "Nao existe nenhum ficheiro de estudantes com o nome dado" << endl;

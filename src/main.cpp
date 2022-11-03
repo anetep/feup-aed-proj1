@@ -12,10 +12,13 @@
 int main() {
 
     ReadFiles o;
-    vector<Turma> h = o.readClassesPerUcFile();
+    vector<Estudante> h = o.readStudentsFile();
 
+    // para aceder a cada turma dos estudantes
     for (auto x : h){
-        cout << x.getClassCode() << endl;
+        for (auto ls : x.getStudentSchedule()){
+            cout << ls.getClassCode() << endl;
+        }
     }
 
     return 0;

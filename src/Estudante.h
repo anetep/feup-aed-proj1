@@ -11,24 +11,30 @@
 #include <algorithm>
 #include <vector>
 #include <set>
+#include <list>
+#include "Turma.h"
 
 
 using namespace std;
 
 class Estudante {
-
 private:
     int studentCode;
     string studentName;
+    list<Turma> horario;
 public:
 
     Estudante();
 
     Estudante(const int &studentCode,const string &studentName);
 
+    Estudante(const int &studentCode,const string &studentName, list<Turma> &turma);
+
     int getStudentCode() const;
 
     string getStudentName() const;
+
+    list<Turma> getStudentSchedule() const;
 
     void setStudentName(string name);
 
