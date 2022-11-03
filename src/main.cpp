@@ -12,12 +12,11 @@
 int main() {
 
     ReadFiles o;
-    vector<Aula> h = o.readClassesFile();
+    vector<Turma> h = o.readClassesPerUcFile();
 
     for (auto x : h){
-        cout << x.getWeekday() << endl;
+        cout << x.getClassCode() << endl;
     }
-
 
     return 0;
 }

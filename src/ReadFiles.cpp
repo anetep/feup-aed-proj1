@@ -38,12 +38,6 @@ vector<Estudante> ReadFiles::readStudentsFile(){
 vector<Aula> ReadFiles::readClassesFile(){
     ifstream in("helper_classes.txt");
     string line;
-    string uc;
-    string cl;
-    string day;
-    string start;
-    string dur;
-    string type;
 
     char* dup;
     vector <Aula> aulas;
@@ -68,6 +62,31 @@ vector<Aula> ReadFiles::readClassesFile(){
 
     return  aulas;
 }
+
+
+vector<Turma> ReadFiles::readClassesPerUcFile(){
+    ifstream in("helper_per_uc.txt");
+    string line;
+
+    char* dup;
+    vector <Turma> turmas;
+
+    if (in.is_open()){
+        getline(in, line);
+        while (getline(in, line)){
+            dup = strdup(line.c_str());
+            string ucCode = strtok(dup, ",");
+            string classCode = strtok(NULL, ",");
+
+            Turma r(ucCode, classCode);
+            turmas.push_back(r);
+        }
+    }
+
+    in.close();
+    return  turmas;
+}
+
 
 
 

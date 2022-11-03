@@ -4,11 +4,21 @@
 
 #include "Turma.h"
 
-string Turma::getClassCode(){
-    return classCode;
+Turma::Turma(){
+    this->ucCode = "";
+    this->classCode = "";
+}
+
+Turma::Turma (const string &ucode, const string &ccode){
+    this->ucCode = ucode;
+    this->classCode = ccode;
+}
+
+string Turma::getUcCode() const{
+    return ucCode;
 }
 
 
-int Turma::getClassCapacity(){
-    return classCapacity;
+string Turma::getClassCode() const{
+    return classCode;
 }

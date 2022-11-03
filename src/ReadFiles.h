@@ -13,6 +13,7 @@
 #include <string.h>
 #include "Estudante.h"
 #include "Aula.h"
+#include "Turma.h"
 
 
 using namespace std;
@@ -21,6 +22,7 @@ class ReadFiles {
 public:
     vector<Estudante> readStudentsFile();
     vector<Aula> readClassesFile();
+    vector<Turma> readClassesPerUcFile();
 };
 
 
