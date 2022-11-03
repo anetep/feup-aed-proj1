@@ -8,7 +8,7 @@ using namespace std;
 Estudante::Estudante(){
     this->studentCode = 0;
     this->studentName = "";
-    this->horario = list<Turma> {}; // acho que élista vazia
+    this->horario = list<Turma> (); // acho que é lista vazia
 }
 
 
