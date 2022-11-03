@@ -13,31 +13,11 @@
 //TODO depois mudar isso tudo para associar a turma a com uc e class a uma aula
 
 int main() {
-    // ocupação de turmas
-    // recebe uma turma e dá print dos alunos
-    // TODO arrumar estudantes de forma a q as suas turmas ficam na lista
-    // TODO ver casos em que nome repete.
-
-    //ListingBasedOnOcupation a;
-    //a.PrintClassOcupation();
-
-    /*ReadFiles o;
-    vector<Estudante> s = o.readStudentsFile();
-    vector<Estudante> cleanS = o.joinStudentClases(s);
-
-
-    for (auto &st : cleanS){
-        cout << "Num: " << st.getStudentCode() << "     Name:" << st.getStudentName() << endl;
-        cout << "--------" << endl;
-
-        for(auto &t : st.getStudentSchedule()){
-            cout << "Uc: " <<  t.getUcCode() << "     Class: " << t.getClassCode() << endl;
-        }
-        cout << "============================" << endl;
-    }*/
+    // ocupação de ucs
+    // recebe uma uc e dá print dos alunos inscritos
 
     ListingBasedOnOcupation o;
-    o.PrintClassOcupation("3LEIC08");
+    o.PrintUcOcupation("L.EIC025");
 
 
     return 0;

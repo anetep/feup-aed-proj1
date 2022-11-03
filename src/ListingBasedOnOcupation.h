@@ -16,6 +16,9 @@ public:
     vector <pair<string, string>> CompareClassOcupation(vector<Estudante> &estudantes, string classD);
     void PrintClassOcupation(string classD);
 
+    vector <pair<string, string>> CompareUcOcupation(vector<Estudante> &estudantes, string uc);
+    void PrintUcOcupation(string uc);
+
 };
 
 
