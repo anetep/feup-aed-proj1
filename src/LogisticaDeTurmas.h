@@ -17,9 +17,15 @@ class LogisticaDeTurmas {
 private:
 public:
     void printAllStudentsOrderedByNum();
-    vector<Estudante> removeDuplicatesNums(vector<Estudante> &students);
+    void printAllClasses();
+    void printAllUcs();
 
-};
+    vector<Estudante> removeDuplicatesStudentsNums(vector<Estudante> &students);
+
+    vector<Turma> removeDuplicateClassCode(vector<Turma> &aulas);
+
+
+    };
 
 
 #endif //SRC_LOGISTICADETURMAS_H
