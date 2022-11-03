@@ -14,7 +14,7 @@ vector<Turma> remove(vector<Turma> &aulas) {
     int size = aulas.size();
     vector<Turma> newA;
     while (size) {
-        if (aulas[i].getClassCode() == aulas[i + 1].getClassCode()) {
+        if (aulas[i].getUcCode() == aulas[i + 1].getUcCode()) {
             size--;
             i++;
         }
@@ -28,7 +28,7 @@ vector<Turma> remove(vector<Turma> &aulas) {
 }
 
 bool compare(Turma &x, Turma &y) {
-    return x.getClassCode() < y.getClassCode();
+    return x.getUcCode() < y.getUcCode();
 }
 
 
@@ -40,9 +40,9 @@ int main() {
     Turma a("L.EIC001","1LEIC12");
     Turma b("L.EIC001","1LEIC09");
     Turma c("L.EIC002","1LEIC04");
-    Turma d("L.EIC002","1LEIC10");
+    Turma d("L.EIC003","1LEIC10");
     Turma e("L.EIC001","1LEIC12");
-    Turma f("L.EIC003","1LEIC04");
+    Turma f("L.EIC002","1LEIC04");
 
     vector<Turma> teste;
     teste.push_back(a);
@@ -56,7 +56,7 @@ int main() {
     cout << "original" << endl;
 
     for (auto &c : teste){
-        cout << c.getClassCode() << endl;
+        cout << c.getUcCode() << endl;
     }
 
     cout << "------------------------" << endl;
@@ -65,7 +65,7 @@ int main() {
     sort(teste.begin(), teste.end(), compare);
 
     for (auto &c : teste){
-        cout << c.getClassCode() << endl;
+        cout << c.getUcCode() << endl;
     }
 
     cout << "------------------------" << endl;
@@ -74,7 +74,7 @@ int main() {
     vector<Turma> testeFiltered = remove(teste);
 
     for (auto &c : testeFiltered){
-        cout << c.getClassCode() << endl;
+        cout << c.getUcCode() << endl;
     }
 
     return 0;
