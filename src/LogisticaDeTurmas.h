@@ -8,6 +8,7 @@
 
 #include "Estudante.h"
 #include "Turma.h"
+#include "ReadFiles.h"
 #include <list>
 
 
@@ -15,7 +16,9 @@
 class LogisticaDeTurmas {
 private:
 public:
-    vector<Estudante> removeDuplicateStudents(vector<Estudante> &st);
+    void printAllStudentsOrderedByNum();
+    vector<Estudante> removeDuplicatesNums(vector<Estudante> &students);
+
 };
 
 
