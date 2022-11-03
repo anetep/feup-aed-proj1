@@ -15,6 +15,7 @@ using namespace std;
 
 class Aula {
 private:
+    string classCode_;  // Código da Uc
     string ucCode_;  // Código da Uc
     string weekday_; //Dia da semana
     float startHour_; //Hora de Início da aula
@@ -25,9 +26,11 @@ public:
 
     Aula();
 
-    Aula(const string &ucCode_, const string &weekday_,const float &startHour_,const float &duration_,const string &type_);
+    Aula(const string &classCode_, const string &ucCode_, const string &weekday_,const float &startHour_,const float &duration_,const string &type_);
 
     string getUcCode() const;
+
+    string getClassCode() const;
 
     string getWeekday() const;
 

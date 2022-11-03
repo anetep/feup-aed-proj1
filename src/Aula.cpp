@@ -5,6 +5,7 @@
 #include "Aula.h"
 
 Aula::Aula(){
+    this->classCode_ = "";
     this->ucCode_ = "";
     this->weekday_ = "";
     this->startHour_ = 0;
@@ -12,7 +13,8 @@ Aula::Aula(){
     this->type_ = "";
 }
 
-Aula::Aula(const string &uc, const string &wkd,const float &sh,const float &d,const string &t){
+Aula::Aula(const string &cc,const string &uc, const string &wkd,const float &sh,const float &d,const string &t){
+    this->classCode_ = cc;
     this->ucCode_ = uc;
     this->weekday_ = wkd;
     this->startHour_ = sh;
@@ -24,6 +26,8 @@ Aula::Aula(const string &uc, const string &wkd,const float &sh,const float &d,co
 string Aula::getUcCode() const {return ucCode_;} //get Uc code
 
 string Aula::getWeekday() const {return weekday_;}
+
+string Aula::getClassCode() const{return classCode_;}
 
 float Aula::getStartHour() const {return startHour_;}
 

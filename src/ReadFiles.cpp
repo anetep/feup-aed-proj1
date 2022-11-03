@@ -8,7 +8,7 @@
 using namespace std;
 
 // retorna um vector com todos os estudantes do ficheiro
-vector<Estudante> ReadFiles::readStudentsFile() const{
+vector<Estudante> ReadFiles::readStudentsFile(){
     ifstream in("helper.txt");
 
     string line;
@@ -34,5 +34,41 @@ vector<Estudante> ReadFiles::readStudentsFile() const{
     in.close();
     return all;
 }
+
+vector<Aula> ReadFiles::readClassesFile(){
+    ifstream in("helper_classes.txt");
+    string line;
+    string uc;
+    string cl;
+    string day;
+    string start;
+    string dur;
+    string type;
+
+    char* dup;
+    vector <Aula> aulas;
+
+    if (in.is_open()){
+        getline(in, line);
+        while (getline(in, line)){
+            dup = strdup(line.c_str());
+            string cl = strtok(dup, ",");
+            string uc = strtok(NULL, ",");
+            string day = strtok(NULL, ",");
+            float start = stof(strtok(NULL, ","));
+            float dur = stof(strtok(NULL, ","));
+            string type = strtok(NULL, ",");
+
+            Aula r(cl, uc, day, start, dur, type);
+            aulas.push_back(r);
+        }
+    }
+
+    in.close();
+
+    return  aulas;
+}
+
+
 
 

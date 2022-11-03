@@ -11,19 +11,12 @@
 
 int main() {
 
-    Aula aula("1leic", "segunda", 10.5, 1, "TP");
-    ReadFiles r;
-    vector<Estudante> st = r.readStudentsFile();
+    ReadFiles o;
+    vector<Aula> h = o.readClassesFile();
 
-    cout <<  "codigo: " << aula.getUcCode()  << endl;
-    cout <<  "duracao: " << aula.getDuration()  << endl;
-    cout << 00231 << endl;
-
-    for (const auto &s : st){
-        cout <<  "num: " << s.getStudentCode()  << "   ";
-        cout <<  "nome: " << s.getStudentName()  << endl;
+    for (auto x : h){
+        cout << x.getWeekday() << endl;
     }
-
 
 
     return 0;

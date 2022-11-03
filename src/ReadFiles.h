@@ -10,13 +10,17 @@
 #include <sstream>
 #include <vector>
 #include <list>
+#include <string.h>
 #include "Estudante.h"
+#include "Aula.h"
+
 
 using namespace std;
 
 class ReadFiles {
 public:
-    vector<Estudante> readStudentsFile() const;
+    vector<Estudante> readStudentsFile();
+    vector<Aula> readClassesFile();
 };
 
 
