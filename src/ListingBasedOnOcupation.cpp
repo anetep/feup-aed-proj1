@@ -17,29 +17,16 @@ vector <pair<string, string>> ListingBasedOnOcupation::CompareClassOcupation(vec
     return studOcup;
 }
 
-void ListingBasedOnOcupation::PrintClassOcupation(){
-
+void ListingBasedOnOcupation::PrintClassOcupation(string classD){
     ReadFiles o;
     vector<Estudante> s = o.readStudentsFile();
     vector<Estudante> cleanS = o.joinStudentClases(s);
 
-    cout << "turma: 3LEIC08" << endl; // anete e carminho
-    vector<pair<string, string>> res = CompareClassOcupation(cleanS, "3LEIC08");
+    cout << "--------------------" << endl;
+    cout << "Ocupantes da turma: " << classD << endl;
+    cout << "--------------------" << endl;
+    vector<pair<string, string>> res = CompareClassOcupation(cleanS, classD);
     for (auto r: res){
-        cout << r.first << " na unidade curricular " << r.second << endl;
-    }
-    cout << "===================" << endl;
-
-    cout << "turma: 1LEIC08" << endl; // gisela e carminho
-    vector<pair<string, string>> res2 = CompareClassOcupation(cleanS, "1LEIC08");
-    for (auto r: res2){
-        cout << r.first << " na unidade curricular " << r.second << endl;
-    }
-    cout << "===================" << endl;
-
-    cout << "turma: 1LEIC05" << endl; // iara
-    vector<pair<string, string>> res3 = CompareClassOcupation(cleanS, "1LEIC05");
-    for (auto r: res3){
         cout << r.first << " na unidade curricular " << r.second << endl;
     }
     cout << "===================" << endl;

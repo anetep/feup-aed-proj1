@@ -11,35 +11,6 @@
 #include "ListingBasedOnOcupation.h"
 
 //TODO depois mudar isso tudo para associar a turma a com uc e class a uma aula
-vector<Estudante> joinStudentClases(vector <Estudante> &fromFile){
-    int i = 0;
-    int size = fromFile.size();
-
-    vector<Estudante> cleanStudents;
-    list<Turma> turmas;
-    Estudante s;
-
-    while (size) {
-        if (fromFile[i].getStudentCode() == fromFile[i + 1].getStudentCode()) {
-            turmas.push_back(fromFile[i].getStudentSchedule().front());
-            size--;
-            i++;
-        }
-        else {
-            turmas.push_back(fromFile[i].getStudentSchedule().front());
-            s.setStudentCode(fromFile[i].getStudentCode());
-            s.setStudentName(fromFile[i].getStudentName());
-            s.setStudentClasses(turmas);
-            cleanStudents.push_back(s);
-            turmas.clear();
-            size--;
-            i++;
-        }
-    }
-    return cleanStudents;
-}
-
-
 
 int main() {
     // ocupação de turmas
@@ -50,18 +21,24 @@ int main() {
     //ListingBasedOnOcupation a;
     //a.PrintClassOcupation();
 
-    ReadFiles o;
+    /*ReadFiles o;
     vector<Estudante> s = o.readStudentsFile();
-    vector<Estudante> cleanS = joinStudentClases(s);
+    vector<Estudante> cleanS = o.joinStudentClases(s);
 
 
     for (auto &st : cleanS){
-        cout << "Name: " << st.getStudentName() << endl;
+        cout << "Num: " << st.getStudentCode() << "     Name:" << st.getStudentName() << endl;
+        cout << "--------" << endl;
+
         for(auto &t : st.getStudentSchedule()){
             cout << "Uc: " <<  t.getUcCode() << "     Class: " << t.getClassCode() << endl;
         }
         cout << "============================" << endl;
-    }
+    }*/
+
+    ListingBasedOnOcupation o;
+    o.PrintClassOcupation("3LEIC08");
+
 
     return 0;
 }

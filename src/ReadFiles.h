@@ -21,8 +21,10 @@ using namespace std;
 class ReadFiles {
 public:
     vector<Estudante> readStudentsFile();
+    vector<Estudante> joinStudentClases(vector <Estudante> &fromFile);
     vector<Aula> readClassesFile();
     vector<Turma> readClassesPerUcFile();
+
 };
 
 

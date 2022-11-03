@@ -38,6 +38,35 @@ vector<Estudante> ReadFiles::readStudentsFile(){
     return all;
 }
 
+
+vector<Estudante> ReadFiles::joinStudentClases(vector <Estudante> &fromFile){
+    int i = 0;
+    int size = fromFile.size();
+
+    vector<Estudante> cleanStudents;
+    list<Turma> turmas;
+    Estudante s;
+
+    while (size) {
+        if (fromFile[i].getStudentCode() == fromFile[i + 1].getStudentCode()) {
+            turmas.push_back(fromFile[i].getStudentSchedule().front());
+            size--;
+            i++;
+        }
+        else {
+            turmas.push_back(fromFile[i].getStudentSchedule().front());
+            s.setStudentCode(fromFile[i].getStudentCode());
+            s.setStudentName(fromFile[i].getStudentName());
+            s.setStudentClasses(turmas);
+            cleanStudents.push_back(s);
+            turmas.clear();
+            size--;
+            i++;
+        }
+    }
+    return cleanStudents;
+}
+
 vector<Aula> ReadFiles::readClassesFile(){
     ifstream in("helper_classes.txt");
     string line;

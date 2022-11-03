@@ -21,7 +21,7 @@ class Estudante {
 private:
     int studentCode;
     string studentName;
-    list<Turma> horario;
+    list<Turma> turmas;
 public:
 
     Estudante();
@@ -39,6 +39,8 @@ public:
     void setStudentName(string name);
 
     void setStudentCode(int code);
+
+    void setStudentClasses(list<Turma> turmas);
 };
 
 #endif //SRC_ESTUDANTE_H
