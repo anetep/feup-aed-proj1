@@ -13,9 +13,9 @@ class Menu {
 public:
     Menu();
 
-    void showMenuOccupation();// Mostra numero de pessoas numa determinada turma numa determinada UC
+    static void showMenuOccupation();// Mostra numero de pessoas numa determinada turma numa determinada UC
 
-    void showMenuSchedule(); // mostra o horário de um determinado aluno
+    static void showMenuHorario(); // mostra o horário de um determinado aluno
 
     void showMenuAlunos(); // mostra determinada turma
 
@@ -23,7 +23,7 @@ public:
 
     void showMenuStudentSomeUCs(); // mostra alunos com mais de n UnidadesCurriculares;
 
-    void showOccupationOrder(); // Informa a ordem
+    void showMenuOccupationOrder(); // Informa a ordem
 
 
 };
