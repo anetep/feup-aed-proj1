@@ -8,7 +8,6 @@
 #include <iostream>
 #include <list>
 
-#include "Estudante.h"
 #include "Aula.h"
 
 
@@ -16,38 +15,20 @@ using namespace std;
 
 class Turma {
 private:
+    string ucCode;
     string classCode;
-    int classCapacity;
-    list<Aula> classUcs;
-    list<Estudante> classStudents;
+    //int classCapacity;
 public:
-    /**
-     * \brief Construtor default da classe Turma.
-     * Instancia uma turma com classCode "", classCapacity 0, classUcs {},list<Estudante> {}.
-     */
+
     Turma();
 
-    /**
-     * Instancia uma turma com atributos definidos pelos parâmetros da função.
-     * @param classCode Código/número da turma.
-     * @param classCapacity Capacidade de uma turma.
-     * @param classUcs Aulas de uma turma.
-     * @param classStudents Estudantes de uma turma.
-     */
-    Turma(string classCode, int classCapacity, list<Aula> classUcs, list<Estudante> classStudents);
+    Turma(const string &ucode, const string &ccode);
 
+    string getUcCode() const;
 
-    /**
-     * Retorna o código de uma turma.
-     * @return código da turma.
-     */
-    string getClassCode();
+    string getClassCode() const;
 
-    /**
-     * Retorna a capacidade de uma turma.
-     * @return capacidade da turma.
-     */
-    int getClassCapacity(); //TODO: Implementar para receber um classCode e retornar a capacity de uma turma definida pelo user?
+    //int getClassCapacity() const;
 
 };
 

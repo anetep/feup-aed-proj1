@@ -85,20 +85,14 @@ build CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj: CXX_COMPILER__src_Debug C$:/
   OBJECT_DIR = CMakeFiles\src.dir
   OBJECT_FILE_DIR = CMakeFiles\src.dir
 
-build CMakeFiles/src.dir/GestaoDeTransferencia.cpp.obj: CXX_COMPILER__src_Debug C$:/universidade/aed/feup-aed-proj1/src/GestaoDeTransferencia.cpp || cmake_object_order_depends_target_src
-  DEP_FILE = CMakeFiles\src.dir\GestaoDeTransferencia.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\src.dir
-  OBJECT_FILE_DIR = CMakeFiles\src.dir
-
 build CMakeFiles/src.dir/BinarySearchTree.cpp.obj: CXX_COMPILER__src_Debug C$:/universidade/aed/feup-aed-proj1/src/BinarySearchTree.cpp || cmake_object_order_depends_target_src
   DEP_FILE = CMakeFiles\src.dir\BinarySearchTree.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\src.dir
   OBJECT_FILE_DIR = CMakeFiles\src.dir
 
-build CMakeFiles/src.dir/Schedule.cpp.obj: CXX_COMPILER__src_Debug C$:/universidade/aed/feup-aed-proj1/src/Schedule.cpp || cmake_object_order_depends_target_src
-  DEP_FILE = CMakeFiles\src.dir\Schedule.cpp.obj.d
+build CMakeFiles/src.dir/ReadFiles.cpp.obj: CXX_COMPILER__src_Debug C$:/universidade/aed/feup-aed-proj1/src/ReadFiles.cpp || cmake_object_order_depends_target_src
+  DEP_FILE = CMakeFiles\src.dir\ReadFiles.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\src.dir
   OBJECT_FILE_DIR = CMakeFiles\src.dir
@@ -111,7 +105,7 @@ build CMakeFiles/src.dir/Schedule.cpp.obj: CXX_COMPILER__src_Debug C$:/universid
 #############################################
 # Link the executable src.exe
 
-build src.exe: CXX_EXECUTABLE_LINKER__src_Debug CMakeFiles/src.dir/main.cpp.obj CMakeFiles/src.dir/Menu.cpp.obj CMakeFiles/src.dir/Estudante.cpp.obj CMakeFiles/src.dir/Turma.cpp.obj CMakeFiles/src.dir/Aula.cpp.obj CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj CMakeFiles/src.dir/GestaoDeTransferencia.cpp.obj CMakeFiles/src.dir/BinarySearchTree.cpp.obj CMakeFiles/src.dir/Schedule.cpp.obj
+build src.exe: CXX_EXECUTABLE_LINKER__src_Debug CMakeFiles/src.dir/main.cpp.obj CMakeFiles/src.dir/Menu.cpp.obj CMakeFiles/src.dir/Estudante.cpp.obj CMakeFiles/src.dir/Turma.cpp.obj CMakeFiles/src.dir/Aula.cpp.obj CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj CMakeFiles/src.dir/BinarySearchTree.cpp.obj CMakeFiles/src.dir/ReadFiles.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\src.dir

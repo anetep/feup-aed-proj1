@@ -15,6 +15,7 @@ using namespace std;
 
 class Aula {
 private:
+    string classCode_;  // Código da Uc
     string ucCode_;  // Código da Uc
     string weekday_; //Dia da semana
     float startHour_; //Hora de Início da aula
@@ -23,51 +24,23 @@ private:
 
 public:
 
-    /**
-     * \brief Construtor default da classe Aula.
-     * Instancia um Aula com ucCode_ "", weekday_ "", float = 0.0, duration_ = 0.0, type_ "".
-     */
     Aula();
 
-    /**
-     * Instancia um cliente com atributos definidos pelos parâmetros da função.
-     * @param ucCode_ Código da Uc.
-     * @param weekday_ Dia da semana da aula.
-     * @param startHour_ Hora de Início da aula.
-     * @param duration_ Duração da aula.
-     * @param type_ Tipo da aula (T || TP).
-     */
-    Aula(string ucCode_, string weekday_, float startHour_, float duration_, string type_);
+    Aula(const string &classCode_, const string &ucCode_, const string &weekday_,const float &startHour_,const float &duration_,const string &type_);
 
-    /**
-     * Retorna Código da Uc.
-     * @return Código da Uc.
-     */
-    string getUcCode();
+    string getUcCode() const;
 
-    /**
-     * Retorna Dia da semana da aula.
-     * @return Dia da semana da aula.
-     */
-    string getWeekday();
+    string getClassCode() const;
 
-    /**
-     * Retorna Hora de Início da aula.
-     * @return Hora de Início da aula.
-     */
-    float getStartHour();
+    string getWeekday() const;
 
-    /**
-     * Retorna a Duração da aula.
-     * @return Duração da aula.
-     */
-    float getDuration();
+    float getStartHour() const;
 
-    /**
-     * Retorna a Hora de Fim da aula.
-     * @return a Hora de Fim da aula.
-     */
-    float getEndHour();
+    float getDuration() const;
+
+    float getEndHour() const;
+
+    string getTypeOfClass() const;
 };
 
 

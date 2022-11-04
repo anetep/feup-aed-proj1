@@ -4,12 +4,36 @@
 
 #include "Aula.h"
 
-string Aula::getUcCode() {return ucCode_;} //get Uc code
+Aula::Aula(){
+    this->classCode_ = "";
+    this->ucCode_ = "";
+    this->weekday_ = "";
+    this->startHour_ = 0;
+    this->duration_ = 0;
+    this->type_ = "";
+}
 
-string Aula::getWeekday() {return weekday_;}
+Aula::Aula(const string &cc,const string &uc, const string &wkd,const float &sh,const float &d,const string &t){
+    this->classCode_ = cc;
+    this->ucCode_ = uc;
+    this->weekday_ = wkd;
+    this->startHour_ = sh;
+    this->duration_ = d;
+    this->type_ = t;
+}
 
-float Aula::getStartHour() {return startHour_;}
 
-float Aula::getDuration() {return duration_;}
+string Aula::getUcCode() const {return ucCode_;} //get Uc code
 
-float Aula::getEndHour() {return startHour_ + duration_;}
+string Aula::getWeekday() const {return weekday_;}
+
+string Aula::getClassCode() const{return classCode_;}
+
+float Aula::getStartHour() const {return startHour_;}
+
+float Aula::getDuration() const {return duration_;}
+
+float Aula::getEndHour() const {return startHour_ + duration_;}
+
+string Aula::getTypeOfClass() const {return type_;}
+
