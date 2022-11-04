@@ -6,6 +6,7 @@
 #define SRC_MENU_H
 
 #include "ReadFiles.h"
+using namespace std;
 
 
 class Menu {
@@ -17,13 +18,13 @@ public:
 
     static void showMenuHorario(); // mostra o horário de um determinado aluno
 
-    void showMenuAlunos(); // mostra determinada turma
+    static void showMenuTurma(); // mostra determinada turma
 
-    void showMenuUnidadeCurricular();// mostra alunos inscritos em determinada Uc
+    static void showMenuUnidadeCurricular();// mostra alunos inscritos em determinada Uc
 
-    void showMenuStudentSomeUCs(); // mostra alunos com mais de n UnidadesCurriculares;
+    static void showMenuStudentSomeUCs(); // mostra alunos com mais de n UnidadesCurriculares;
 
-    void showMenuOccupationOrder(); // Informa a ordem
+    static void showMenuOccupationOrder(); // Informa a ordem
 
 
 };

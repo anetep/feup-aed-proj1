@@ -7,81 +7,99 @@
 
 void Menu::showMenuOccupation() {
     int input;
-    cout<< "Menu Contagem\n"
-        << "1.Contagem de alunos numa turma\n"
-        << "2. Contagem de alunos numa Unidade Curricular\n"
-        << "3. Contagem de alunos num ano\n"
-        << "Escolha uma das opcoes! "; cin >> input;
-
-    switch (input) {
-        case 1:
-            cout<<"-----------------\n";
-            showMenuOccupation();
-            break;
-        case 2:
-            cout<<"-----------------\n";
-
-    }
-}
-void Menu::showMenuAlunos() {
-    int input;
     cout << "Menu Alunos\n"
-         << "1. Visualizar Alunos de determinada UC\n"
-         << "2. Visualizar Alunos de determinada Turma\n"
-         << "3. Visualizar Alunos de determinado Ano\n"
+         << "1. Visualizar Contagem de alunos de determinada UC\n"
+         << "2. Visualizar Contagem de alunos de determinada Turma\n"
+         << "3. Visualizar Contagem de alunos de determinado Ano\n"
          << "4. Sair\n"
          << "Escolha uma das opcoes! ";
-    /*do {
+    do {
         cin >> input;
         switch (input) {
             case 1:
-                string UC;
-                cout<< "Digite a uc\n";
-                break;
+            {string UC;
+                cout<< "Digite a uc\n";// mostrar contagem uc
+                cout << "-------------------------\n";
+                showMenuOccupationOrder();
+                break;}
             case 2:
+            {
                 string turma;
-                int ano2;
+                int ano;
                 cout<< "Digite a turma\n";cin>> turma;
-                cout<< "Digite o ano\n";cin>> ano2;
-                //show turma(turma, ano);
-                break;
+                cout<< "Digite o ano\n";cin>> ano;//mostrar contagem turma
+                cout << "-------------------------\n";
+                showMenuOccupationOrder();
+                break;}
             case 3:
-                int ano3;
-                cout<< "Digite o ano\n"; cin>> ano3;
-                //
+                int ano2;
+                cout<<"Digite o ano\n";cin>> ano2;//mostrar contagem ano
+                cout << "-------------------------\n";
+                showMenuOccupationOrder();
+            default:
+                cout << "Input invalido, por favor tente outra vez:" << endl;
                 break;
-        }
-    } while (input != 4);*/
+
     }
+    }while (input != 4);
+}
 
     void Menu::showMenuHorario() {
         int input;
-        cout << "Menu Horários\n"
-             << "1.Digite o número de estudante\n"
-             << "2.Digite o numero da turma\n"
-             << "3. Sair";
-        do {
-            cin >> input;
-            switch (input) {
-                case 1:
-                    //show horario estudante
-                    break;
-                case 2:
-                    int ano;
-                    cout << "Digite o ano\n";
-                    cin >> ano;
-                    // show horario
-                    break;
-                case 3:
-                    break;
-                default:
-                    cout << "Input invalido, por favor tente outra vez:" << endl;
-            }
-            if (input != 3) {
-                cout << "Menu Horários\n"
-                     << "1.Digite o número de estudante\n"
-                     << "2.Digite o numero da turma\n"
-                     << "3. Sair";
-            }
-        } while (input != 3);
+        cout << "Digite o número de estudante\n";
+        cin >> input;
+        // mostrar horario(nr_estudante)
     }
+    void Menu::showMenuTurma() {
+    int input;
+    cout<< "Digite o numero da turma\n";
+    //mostrar turma
+}
+void Menu::showMenuUnidadeCurricular() {
+    int input;
+    cout << "Digite o número da Unidade Curricular\n";
+    cin>> input;
+    // mostrar uc
+}
+void Menu::showMenuStudentSomeUCs() {
+    int input;
+    cout<< "Digite o numero de Unidades Curriculares;";
+    cin>> input;
+    //mostrar lista;
+}
+void Menu::showMenuOccupationOrder() {
+    int input;
+    cout<< "Menu Ordem\n"
+        << "1. Ordenar por Uc\n"
+        << "2. Ordem ascendente\n"
+        << "3. Ordem descendente\n"
+        << "4. Sair\n";
+    do{
+        cin>> input;
+        switch (input) {
+            case 1:
+                // mostrar por ordem de uc
+                break;
+            case 2:
+                //ordem ascendente
+                break;
+            case 3:
+                //ordem descendente
+                break;
+            case 4:
+                break;
+            default:
+                cout << "Input invalido, por favor tente outra vez:" << endl;
+                break;
+        }
+        if (input=!4){
+            cout<< "Menu Ordem\n"
+                << "1. Ordenar por Uc\n"
+                << "2. Ordem ascendente\n"
+                << "3. Ordem descendente\n"
+                << "4. Sair\n";
+        }
+    }while(input!=4);
+
+
+}
