@@ -10,7 +10,6 @@ using namespace std;
 // retorna um vector com todos os estudantes do ficheiro
 vector<Estudante> ReadFiles::readStudentsFile(){
     ifstream in("helper_students.txt");
-
     string line;
     char* dup;
 
@@ -33,9 +32,11 @@ vector<Estudante> ReadFiles::readStudentsFile(){
     } else{
         cerr << "Nao existe nenhum ficheiro de estudantes com o nome dado" << endl;
     }
-
     in.close();
-    return all;
+
+    vector <Estudante> result = joinStudentClases(all);
+
+    return result;
 }
 
 
@@ -68,7 +69,7 @@ vector<Estudante> ReadFiles::joinStudentClases(vector <Estudante> &fromFile){
 }
 
 vector<Aula> ReadFiles::readClassesFile(){
-    ifstream in("helper_classes.txt");
+    ifstream in("classes.txt");
     string line;
 
     char* dup;
