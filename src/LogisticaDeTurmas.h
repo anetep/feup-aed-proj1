@@ -9,6 +9,7 @@
 #include "Estudante.h"
 #include "Turma.h"
 #include "ReadFiles.h"
+#include "ListingBasedOnOcupation.h"
 #include <cmath>
 #include <list>
 
@@ -31,6 +32,10 @@ public:
     string convertFloatToTime(float hour);
     void printStudentSchedule(int studentCode);
 
+    vector<Estudante> removeStudentFromClass(int studentCode, string classCode, vector<Estudante> &estudantes);
+    vector<Estudante> removeStudentFromUc(int studentCode, string ucCode, vector<Estudante> &estudantes);
+    void printStudentRemovedFromClass(int studentCode, string classCode, vector<Estudante> &estudantes);
+    void printStudentRemovedFromUc(int studentCode, string ucCode, vector<Estudante> &estudantes);
 
 
 };
