@@ -296,6 +296,30 @@ ReadFiles.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/ReadFiles.cpp.s
 .PHONY : ReadFiles.cpp.s
 
+TrocaDeTurmas.obj: TrocaDeTurmas.cpp.obj
+.PHONY : TrocaDeTurmas.obj
+
+# target to build an object file
+TrocaDeTurmas.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/TrocaDeTurmas.cpp.obj
+.PHONY : TrocaDeTurmas.cpp.obj
+
+TrocaDeTurmas.i: TrocaDeTurmas.cpp.i
+.PHONY : TrocaDeTurmas.i
+
+# target to preprocess a source file
+TrocaDeTurmas.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/TrocaDeTurmas.cpp.i
+.PHONY : TrocaDeTurmas.cpp.i
+
+TrocaDeTurmas.s: TrocaDeTurmas.cpp.s
+.PHONY : TrocaDeTurmas.s
+
+# target to generate assembly for a file
+TrocaDeTurmas.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/TrocaDeTurmas.cpp.s
+.PHONY : TrocaDeTurmas.cpp.s
+
 Turma.obj: Turma.cpp.obj
 .PHONY : Turma.obj
 
@@ -374,6 +398,9 @@ help:
 	@echo ... ReadFiles.obj
 	@echo ... ReadFiles.i
 	@echo ... ReadFiles.s
+	@echo ... TrocaDeTurmas.obj
+	@echo ... TrocaDeTurmas.i
+	@echo ... TrocaDeTurmas.s
 	@echo ... Turma.obj
 	@echo ... Turma.i
 	@echo ... Turma.s

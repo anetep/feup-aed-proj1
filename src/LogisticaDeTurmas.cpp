@@ -139,6 +139,15 @@ void LogisticaDeTurmas::printAllUcs(){
 
 // ============================= Retornar o Horário de um estudante =================================
 
+Estudante LogisticaDeTurmas::getStudentWithCodeX(int studentCode, vector<Estudante> &students){
+    Estudante res;
+    for (auto &st : students){
+        if (st.getStudentCode() == studentCode) return st;
+    }
+    cout << "Não existe estudante com esse número" << endl;
+    return res; // se não houver retorna estudante vazio
+}
+
 Estudante LogisticaDeTurmas::getStudentFromFile(int studentCode){
     ReadFiles o;
     vector<Estudante> allSt = o.readStudentsFile();
@@ -180,6 +189,7 @@ string LogisticaDeTurmas::convertFloatToTime(float hour){
     return res;
 }
 
+//TODO corrigir o getStudentFromFile para receber o vector de estudantes em vez de ir buscar no ficheiro
 void LogisticaDeTurmas::printStudentSchedule(int studentCode){
     Estudante stud = getStudentFromFile(studentCode);
     vector<Aula> aulasDoLudo = turnStudentClassesToLessons(stud);
