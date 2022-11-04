@@ -18,21 +18,6 @@ vector <pair<string, string>> ListingBasedOnOcupation::CompareClassOcupation(vec
     return studOcup;
 }
 
-void ListingBasedOnOcupation::PrintClassOcupation(string classD){
-    ReadFiles o;
-    vector<Estudante> s = o.readStudentsFile();
-    vector<Estudante> cleanS = o.joinStudentClases(s);
-
-    cout << "--------------------" << endl;
-    cout << "Ocupantes da turma: " << classD << endl;
-    cout << "--------------------" << endl;
-    vector<pair<string, string>> res = CompareClassOcupation(cleanS, classD);
-    for (auto r: res){
-        cout << r.first << " na unidade curricular " << r.second << endl;
-    }
-    cout << "===================" << endl;
-}
-
 //compara por classes
 // retorna pair com nome do estudante e o cod da turma a que ele está naquela cadeira
 vector <pair<string, string>> ListingBasedOnOcupation::CompareUcOcupation(vector<Estudante> &estudantes, string uc){
@@ -48,15 +33,24 @@ vector <pair<string, string>> ListingBasedOnOcupation::CompareUcOcupation(vector
     return studOcup;
 }
 
-void ListingBasedOnOcupation::PrintUcOcupation(string uc){
-    ReadFiles o;
-    vector<Estudante> s = o.readStudentsFile();
-    vector<Estudante> cleanS = o.joinStudentClases(s);
+void ListingBasedOnOcupation::PrintClassOcupation(vector<Estudante> &estudantes, string classD){
 
+    cout << "--------------------" << endl;
+    cout << "Ocupantes da turma: " << classD << endl;
+    cout << "--------------------" << endl;
+    vector<pair<string, string>> res = CompareClassOcupation(estudantes, classD);
+    for (auto r: res){
+        cout << r.first << " na unidade curricular " << r.second << endl;
+    }
+    cout << "===================" << endl;
+}
+
+
+void ListingBasedOnOcupation::PrintUcOcupation(vector<Estudante> &estudantes, string uc){
     cout << "--------------------" << endl;
     cout << "Alunos inscritos na cadeira: " << uc << endl;
     cout << "--------------------" << endl;
-    vector<pair<string, string>> res = CompareUcOcupation(cleanS, uc);
+    vector<pair<string, string>> res = CompareUcOcupation(estudantes, uc);
     for (auto r: res){
         cout << r.first << " na turma " << r.second << endl;
     }
