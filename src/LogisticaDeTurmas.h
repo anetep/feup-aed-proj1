@@ -9,6 +9,7 @@
 #include "Estudante.h"
 #include "Turma.h"
 #include "ReadFiles.h"
+#include <cmath>
 #include <list>
 
 
@@ -24,6 +25,11 @@ public:
     void printAllStudentsOrderedByNum();
     void printAllClasses();
     void printAllUcs();
+
+    Estudante getStudentFromFile(int studentCode);
+    vector<Aula> turnStudentClassesToLessons(Estudante &student);
+    string convertFloatToTime(float hour);
+    void printStudentSchedule(int studentCode);
 
 
 

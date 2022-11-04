@@ -136,3 +136,59 @@ void LogisticaDeTurmas::printAllUcs(){
         cout << cl.getUcCode() << endl;
     }
 }
+
+Estudante LogisticaDeTurmas::getStudentFromFile(int studentCode){
+    ReadFiles o;
+    vector<Estudante> allSt = o.readStudentsFile();
+
+    for (auto &st : allSt){
+        if (st.getStudentCode() == studentCode) return st;
+    }
+    Estudante a;
+    // se não existir retorna estudante vazio
+    return a;
+}
+
+vector<Aula> LogisticaDeTurmas::turnStudentClassesToLessons(Estudante &student){
+    ReadFiles o;
+    list<Turma> turmas = student.getStudentSchedule();
+    vector<Aula> allClasses = o.readClassesFile();
+    vector<Aula> schedule;
+
+    for (auto &t : turmas){
+        for (auto &aul : allClasses){
+            if ((t.getClassCode() == aul.getClassCode()) && (t.getUcCode() == aul.getUcCode())){
+                schedule.push_back(aul);
+            }
+        }
+    }
+    return schedule;
+}
+
+string LogisticaDeTurmas::convertFloatToTime(float hour){
+    int haux = trunc(hour);
+    string h = to_string(haux);
+    int maux = trunc(60 * (hour - (unsigned int) hour));
+    string m = to_string(maux);
+
+    if (h.length() <= 1) h = "0" + h; //para ficar 02 em vez de 2
+    if (m.length() <= 1) m = "0" + m;
+
+    string res = h + ":" + m;
+    return res;
+}
+
+void LogisticaDeTurmas::printStudentSchedule(int studentCode){
+    Estudante stud = getStudentFromFile(studentCode);
+    vector<Aula> aulasDoLudo = turnStudentClassesToLessons(stud);
+
+    cout << "======================   Horario do/a " << stud.getStudentName() << "  ===========================" << endl;
+    for (auto &al: aulasDoLudo){
+        cout << "Unidade Curricular: " << al.getUcCode() << "             Turma: " << al.getClassCode() << endl;
+        cout << "Dia da semana: " << al.getWeekday() << endl;
+        cout << "Tipo de Aula: " << al.getTypeOfClass() << endl;
+        cout << "Hora de Inicio: " << convertFloatToTime(al.getStartHour()) << "              Hora de fim: " << al.getEndHour() << endl;
+        cout << "Duracao: " << al.getDuration() << endl;
+        cout << " ------------------------------- " << endl;
+    }
+}
