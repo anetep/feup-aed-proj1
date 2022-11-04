@@ -7,73 +7,58 @@
 #include "ReadFiles.h"
 #include <list>
 #include <set>
-#include <cmath>
 #include "LogisticaDeTurmas.h"
 #include "ListingBasedOnOcupation.h"
 
 //TODO associar turma e uc com aula do estudante
 
-Estudante getStudentFromFile(int studentCode){
-    ReadFiles o;
-    vector<Estudante> allSt = o.readStudentsFile();
+vector<Estudante> removeStudentFromClass(int studentCode, string classCode, vector<Estudante> &original){
+    vector<Estudante> novo;
+    list<Turma> newTurmas;
 
-    for (auto &st : allSt){
-        if (st.getStudentCode() == studentCode) return st;
-    }
-    Estudante a;
-    // se não existir retorna estudante vazio
-    return a;
-}
-
-vector<Aula> turnStudentClassesToLessons(Estudante &student){
-    ReadFiles o;
-    list<Turma> turmas = student.getStudentSchedule();
-    vector<Aula> allClasses = o.readClassesFile();
-    vector<Aula> schedule;
-
-    for (auto &t : turmas){
-        for (auto &aul : allClasses){
-            if ((t.getClassCode() == aul.getClassCode()) && (t.getUcCode() == aul.getUcCode())){
-                schedule.push_back(aul);
-            }
+    for (auto &st : original){
+        for (auto &turma : st.getStudentSchedule()){
+            if (st.getStudentCode() == studentCode && turma.getClassCode() == classCode){}
+            else newTurmas.push_back(turma);
         }
+        st.setStudentClasses(newTurmas);
+        novo.push_back(st);
+        newTurmas.clear();
     }
-    return schedule;
+    return novo;
 }
 
-string convertFloatToTime(float hour){
-    int haux = trunc(hour);
-    string h = to_string(haux);
-    int maux = trunc(60 * (hour - (unsigned int) hour));
-    string m = to_string(maux);
+vector<Estudante> removeStudentFromUc(int studentCode, string ucCode, vector<Estudante> &original){
+    vector<Estudante> novo;
+    list<Turma> newTurmas;
 
-    if (h.length() <= 1) h = "0" + h; //para ficar 02 em vez de 2
-    if (m.length() <= 1) m = "0" + m;
-
-    string res = h + ":" + m;
-    return res;
+    for (auto &st : original){
+        for (auto &turma : st.getStudentSchedule()){
+            if (st.getStudentCode() == studentCode && turma.getUcCode() == ucCode){}
+            else newTurmas.push_back(turma);
+        }
+        st.setStudentClasses(newTurmas);
+        novo.push_back(st);
+        newTurmas.clear();
+    }
+    return novo;
 }
+
 
 int main() {
     // horário de estudante
     // recebe estudante
     // compara as turmas e ucs do est com turmas e ucs do ficheiro de aulas
+    ReadFiles o;
+    vector<Estudante> orig = o.readStudentsFile();
 
+    cout << "==== antes ===" << endl;
+    ListingBasedOnOcupation r;
+    r.PrintUcOcupation(orig, "L.EIC025");
 
-    Estudante ludo = getStudentFromFile(202071557);
-    vector<Aula> aulasDoLudo = turnStudentClassesToLessons(ludo);
-
-    cout << "======================   Horario do/a " << ludo.getStudentName() << "  ===========================" << endl;
-    for (auto &al: aulasDoLudo){
-        cout << "Unidade Curricular: " << al.getUcCode() << "             Turma: " << al.getClassCode() << endl;
-        cout << "Dia da semana: " << al.getWeekday() << endl;
-        cout << "Tipo de Aula: " << al.getTypeOfClass() << endl;
-        cout << "Hora de Inicio: " << convertFloatToTime(al.getStartHour()) << "              Hora de fim: " << al.getEndHour() << endl;
-        cout << "Duracao: " << al.getDuration() << endl;
-        cout << " ------------------------------- " << endl;
-    }
-
-    cout << trunc((unsigned int) 8) << endl;
+    cout << "==== depois de eliminar ===" << endl;
+    vector<Estudante> novo = removeStudentFromUc(202071557, "L.EIC025", orig);
+    r.PrintUcOcupation(novo,"L.EIC025");
 
     return 0;
 }
