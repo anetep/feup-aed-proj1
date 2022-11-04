@@ -15,8 +15,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/src.dir/ReadFiles.cpp.obj.d"
   "CMakeFiles/src.dir/Turma.cpp.obj"
   "CMakeFiles/src.dir/Turma.cpp.obj.d"
-  "CMakeFiles/src.dir/UnidadeCurricular.cpp.obj"
-  "CMakeFiles/src.dir/UnidadeCurricular.cpp.obj.d"
   "CMakeFiles/src.dir/main.cpp.obj"
   "CMakeFiles/src.dir/main.cpp.obj.d"
   "libsrc.dll.a"

@@ -130,12 +130,6 @@
 		<Unit filename="C:/universidade/aed/feup-aed-proj1/src/Turma.h">
 			<Option target="src"/>
 		</Unit>
-		<Unit filename="C:/universidade/aed/feup-aed-proj1/src/UnidadeCurricular.cpp">
-			<Option target="src"/>
-		</Unit>
-		<Unit filename="C:/universidade/aed/feup-aed-proj1/src/UnidadeCurricular.h">
-			<Option target="src"/>
-		</Unit>
 		<Unit filename="C:/universidade/aed/feup-aed-proj1/src/main.cpp">
 			<Option target="src"/>
 		</Unit>

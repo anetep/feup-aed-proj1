@@ -16,7 +16,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/universidade/aed/feup-aed-proj1/src/Menu.cpp" "CMakeFiles/src.dir/Menu.cpp.obj" "gcc" "CMakeFiles/src.dir/Menu.cpp.obj.d"
   "C:/universidade/aed/feup-aed-proj1/src/ReadFiles.cpp" "CMakeFiles/src.dir/ReadFiles.cpp.obj" "gcc" "CMakeFiles/src.dir/ReadFiles.cpp.obj.d"
   "C:/universidade/aed/feup-aed-proj1/src/Turma.cpp" "CMakeFiles/src.dir/Turma.cpp.obj" "gcc" "CMakeFiles/src.dir/Turma.cpp.obj.d"
-  "C:/universidade/aed/feup-aed-proj1/src/UnidadeCurricular.cpp" "CMakeFiles/src.dir/UnidadeCurricular.cpp.obj" "gcc" "CMakeFiles/src.dir/UnidadeCurricular.cpp.obj.d"
   "C:/universidade/aed/feup-aed-proj1/src/main.cpp" "CMakeFiles/src.dir/main.cpp.obj" "gcc" "CMakeFiles/src.dir/main.cpp.obj.d"
   )
 

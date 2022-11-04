@@ -231,11 +231,11 @@ vector<Estudante> LogisticaDeTurmas::removeStudentFromUc(int studentCode, string
 void LogisticaDeTurmas::printStudentRemovedFromClass(int studentCode, string classCode, vector<Estudante> &estudantes){
     ListingBasedOnOcupation r;
     vector<Estudante> newStudents = removeStudentFromClass(studentCode, classCode, estudantes);
-    r.PrintClassOcupation(newStudents, classCode);
+    r.printClassOcupation(newStudents, classCode);
 }
 
 void LogisticaDeTurmas::printStudentRemovedFromUc(int studentCode, string ucCode, vector<Estudante> &estudantes){
     ListingBasedOnOcupation r;
     vector<Estudante> newStudents = removeStudentFromUc(studentCode, ucCode, estudantes);
-    r.PrintUcOcupation(newStudents, ucCode);
+    r.printUcOcupation(newStudents, ucCode);
 }

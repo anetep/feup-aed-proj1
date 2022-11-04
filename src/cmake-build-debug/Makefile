@@ -320,30 +320,6 @@ Turma.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/Turma.cpp.s
 .PHONY : Turma.cpp.s
 
-UnidadeCurricular.obj: UnidadeCurricular.cpp.obj
-.PHONY : UnidadeCurricular.obj
-
-# target to build an object file
-UnidadeCurricular.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/UnidadeCurricular.cpp.obj
-.PHONY : UnidadeCurricular.cpp.obj
-
-UnidadeCurricular.i: UnidadeCurricular.cpp.i
-.PHONY : UnidadeCurricular.i
-
-# target to preprocess a source file
-UnidadeCurricular.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/UnidadeCurricular.cpp.i
-.PHONY : UnidadeCurricular.cpp.i
-
-UnidadeCurricular.s: UnidadeCurricular.cpp.s
-.PHONY : UnidadeCurricular.s
-
-# target to generate assembly for a file
-UnidadeCurricular.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/UnidadeCurricular.cpp.s
-.PHONY : UnidadeCurricular.cpp.s
-
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -401,9 +377,6 @@ help:
 	@echo ... Turma.obj
 	@echo ... Turma.i
 	@echo ... Turma.s
-	@echo ... UnidadeCurricular.obj
-	@echo ... UnidadeCurricular.i
-	@echo ... UnidadeCurricular.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
