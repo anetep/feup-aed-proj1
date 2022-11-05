@@ -79,21 +79,18 @@ vector<Turma> LogisticaDeTurmas::removeDuplicateUcCode(vector<Turma> &aulas) {
 
 // ==============================================================
 
-void LogisticaDeTurmas::printAllStudentsOrderedByNum(){
-    ReadFiles o;
-    vector<Estudante> studentFile = o.readStudentsFile();
+void LogisticaDeTurmas::printAllStudentsOrderedByNum(vector<Estudante> students){
     vector<Estudante> newAllStudents;  // novo vetor de estudantes só com num e nome
 
     //fica só o estudante e o seu número
-    for (const auto &st : studentFile) {
+    for (const auto &st : students) {
         Estudante s(st.getStudentCode(), st.getStudentName());
         newAllStudents.push_back(s);
     }
 
     //fazer sort para aparecerem por ordem do nome
-    vector<Estudante> uniqueStudents = removeDuplicatesStudentsNums(studentFile);
+    vector<Estudante> uniqueStudents = removeDuplicatesStudentsNums(students);
     sort(uniqueStudents.begin(), uniqueStudents.end(), compareStudentsNums);
-
 
     cout << "All Students enrolled" << endl;
     cout << "---------------------------" << endl;

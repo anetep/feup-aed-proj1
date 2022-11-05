@@ -23,7 +23,7 @@ public:
     vector<Turma> removeDuplicateClassCode(vector<Turma> &aulas);
     vector<Turma> removeDuplicateUcCode(vector<Turma> &aulas);
 
-    void printAllStudentsOrderedByNum();
+    void printAllStudentsOrderedByNum(vector<Estudante> students);
     void printAllClasses();
     void printAllUcs();
 
