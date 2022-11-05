@@ -16,8 +16,8 @@
 //TODO função para imprimir ocupação de todas as turmas/uc
 //TODO função para imprimir o número de inscritos em todas as turmas
 
-//TODO Corrigir o remove para remover o estudante da turma/uc ao mesmo tempo
 // TODO corrigir o print das ocupações para ficar mais bonitinho
+
 
 
 
@@ -28,12 +28,12 @@ int main() {
     vector<Estudante> estudantes = o.readStudentsFile();
 
     ListingBasedOnOcupation r;
-    r.printClassOcupation(estudantes, "3LEIC07");
+    r.printClassOcupation(estudantes, "3LEIC08");
 
     TrocaDeTurmas h;
-    h.addStudentToUcAndClass(201071357, "L.EIC022", "3LEIC07", estudantes);
+    h.removeStudentFromUcAndClass(201071357, "L.EIC023", "3LEIC08", estudantes);
 
-    r.printClassOcupation(estudantes, "3LEIC07");
+    r.printClassOcupation(estudantes, "3LEIC08");
 
     return 0;
 }

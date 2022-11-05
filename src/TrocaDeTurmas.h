@@ -18,6 +18,8 @@ public:
     bool verifyClassesEquilibrium(string oldUcCode, string oldClassCode, string newUcCode, string newClassCode, vector<Estudante> &students);
     vector<Estudante> addStudentToUcAndClass(int studentCode, string ucCode, string classCode, vector<Estudante> &students);
 
+    vector<Estudante> removeStudentFromUcAndClass(int studentCode, string ucCode,string classCode, vector<Estudante> &estudantes);
+
 
 };
 
