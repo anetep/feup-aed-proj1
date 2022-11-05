@@ -16,7 +16,7 @@ public:
     vector<Aula> getLessonBasedOnClassAndUc(string ucCode, string classCode);
     bool verifyScheduleSobreposion(int studentCode, string ucCode, string classCode, vector<Estudante> &students);
     bool verifyClassesEquilibrium(string oldUcCode, string oldClassCode, string newUcCode, string newClassCode, vector<Estudante> &students);
-    vector<Estudante> addStudentToAClass(int studentCode, string ucCode, string classCode, vector<Estudante> &students);
+    vector<Estudante> addStudentToUcAndClass(int studentCode, string ucCode, string classCode, vector<Estudante> &students);
 
 
 };

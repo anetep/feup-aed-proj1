@@ -59,7 +59,7 @@ bool TrocaDeTurmas::verifyClassesEquilibrium(string oldUcCode, string oldClassCo
 }
 
 
-vector<Estudante> TrocaDeTurmas::addStudentToAClass(int studentCode, string ucCode, string classCode, vector<Estudante> &students) {
+vector<Estudante> TrocaDeTurmas::addStudentToUcAndClass(int studentCode, string ucCode, string classCode, vector<Estudante> &students) {
     // se a lotação atual da turma for superior a 30 não pode haver troca
     if (getClassOccupation(ucCode, classCode, students) >= 30) {
         cerr << "Operacao anulada! A turma" << classCode << " da uc " << ucCode << " já tem "

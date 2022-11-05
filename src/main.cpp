@@ -21,6 +21,8 @@
 
 
 
+
+
 int main() {
     ReadFiles o;
     vector<Estudante> estudantes = o.readStudentsFile();
@@ -29,7 +31,7 @@ int main() {
     r.printClassOcupation(estudantes, "3LEIC07");
 
     TrocaDeTurmas h;
-    h.addStudentToAClass(201071357, "L.EIC022", "3LEIC07", estudantes);
+    h.addStudentToUcAndClass(201071357, "L.EIC022", "3LEIC07", estudantes);
 
     r.printClassOcupation(estudantes, "3LEIC07");
 
