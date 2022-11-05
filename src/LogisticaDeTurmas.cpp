@@ -7,6 +7,7 @@
 // ==============================================================
 // Funções para auxiliar no sort não definidas no .h
 
+
 bool compareStudentsNums(Estudante &x, Estudante &y) {
     return x.getStudentCode() < y.getStudentCode();
 }
