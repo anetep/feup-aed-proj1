@@ -28,9 +28,9 @@ public:
 
     string getClassCode() const;
 
-    string setUcCode(string ucCode);
+    void setUcCode(string ucCode);
 
-    string setClassCode(string classCode);
+    void setClassCode(string classCode);
 
 };
 
