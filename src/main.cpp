@@ -28,9 +28,8 @@ int main() {
     ReadFiles o;
     vector<Estudante> students = o.readStudentsFile();
 
-    ListingBasedOnOcupation a;
-    a.printUcNumberOfStudentsSortedByUc(students);
-
+    ListingBasedOnOcupation s;
+    s.printNumberOfStudentsInAllClass(students);
 
     return 0;
 }

@@ -88,8 +88,56 @@ int ListingBasedOnOcupation::getUcNumberOfStudentsSortedByUc(string ucCode, vect
 void ListingBasedOnOcupation::printUcNumberOfStudentsSortedByUc(vector<Estudante> &students){
     vector<string> allUcs = getAllUniqueUcsFromStudentsEnrolled(students);
 
-    cout << "========== Ucs number of students enrolled ============" << endl;
+    cout << "========== Numero de alunos inscritos em cada UC ============" << endl;
     for (auto &uc : allUcs){
         cout << uc << " : " << getUcNumberOfStudentsSortedByUc(uc, students) << endl;
+    }
+}
+
+vector<Turma> ListingBasedOnOcupation::removeDuplicateUcsAndClasses(vector<Turma> &aulas) {
+    int i = 0;
+    int size = aulas.size();
+
+    // porque removeDuplicateUcsAndClasses testa duplicados adjacentes
+    sort(aulas.begin(), aulas.end(), [](Turma &x, Turma &y) -> bool {return x.getUcCode() < y.getUcCode();});
+    sort(aulas.begin(), aulas.end(), [](Turma &x, Turma &y) -> bool {return x.getClassCode() < y.getClassCode();});
+
+    vector<Turma> newA;
+    while (size) {
+        if (aulas[i].getUcCode() == aulas[i + 1].getUcCode() && aulas[i].getClassCode() == aulas[i + 1].getClassCode()) {
+            size--;
+            i++;
+        }
+        else {
+            size--;
+            newA.push_back(aulas[i]);
+            i++;
+        }
+    }
+    return newA;
+}
+
+vector<Turma> ListingBasedOnOcupation::getAllUniqueUcsAndClassesFromStudentsEnrolled(vector<Estudante> &students){
+    vector<Turma> allUcsAndClasses;
+    for (auto &st : students){
+        for (auto &turma : st.getStudentSchedule()){
+            Turma aux;
+            aux.setUcCode(turma.getUcCode());
+            aux.setClassCode(turma.getClassCode());
+            allUcsAndClasses.push_back(aux);
+        }
+    }
+
+    vector<Turma> res = removeDuplicateUcsAndClasses(allUcsAndClasses);
+    return res;
+}
+
+void ListingBasedOnOcupation::printNumberOfStudentsInAllClass(vector<Estudante> &students){
+    TrocaDeTurmas num;
+    vector<Turma> turmas = getAllUniqueUcsAndClassesFromStudentsEnrolled(students);
+
+    cout << "==========  Numero de alunos inscritos em cada turma (uc/class) ============" << endl;
+    for (auto &parUcClass : turmas){
+        cout << parUcClass.getUcCode() << "  " << parUcClass.getClassCode() << " : " << num.getClassOccupation(parUcClass.getUcCode(), parUcClass.getClassCode(), students) << endl;
     }
 }

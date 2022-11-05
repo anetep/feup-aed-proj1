@@ -7,6 +7,7 @@
 
 #include "Estudante.h"
 #include "ReadFiles.h"
+#include "TrocaDeTurmas.h"
 #include <list>
 
 
@@ -23,7 +24,12 @@ public:
     int getUcNumberOfStudentsSortedByUc(string ucCode, vector<Estudante> &students);
     void printUcNumberOfStudentsSortedByUc(vector<Estudante> &students);
 
-};
+    vector<Turma> removeDuplicateUcsAndClasses(vector<Turma> &aulas);
+    vector<Turma> getAllUniqueUcsAndClassesFromStudentsEnrolled(vector<Estudante> &students);
+
+    void printNumberOfStudentsInAllClass(vector<Estudante> &students);
+
+    };
 
 
 #endif //SRC_LISTINGBASEDONOCUPATION_H

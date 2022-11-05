@@ -614,7 +614,11 @@ CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj: ../ListingBasedOnOcupation.c
   C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/sstream \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/sstream.tcc \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/string.h \
-  C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h
+  C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
+  ../TrocaDeTurmas.h \
+  ../LogisticaDeTurmas.h \
+  C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
+  C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/math.h
 
 CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj: ../LogisticaDeTurmas.cpp \
   ../LogisticaDeTurmas.h \
@@ -787,6 +791,7 @@ CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj: ../LogisticaDeTurmas.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/string.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
   ../ListingBasedOnOcupation.h \
+  ../TrocaDeTurmas.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/math.h
 
@@ -1450,9 +1455,9 @@ CMakeFiles/src.dir/main.cpp.obj: ../main.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
   ../LogisticaDeTurmas.h \
   ../ListingBasedOnOcupation.h \
+  ../TrocaDeTurmas.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
-  C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/math.h \
-  ../TrocaDeTurmas.h
+  C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/math.h
 
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h:
@@ -1827,15 +1832,15 @@ C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/string.h:
 
-../LogisticaDeTurmas.cpp:
+../TrocaDeTurmas.h:
 
 ../LogisticaDeTurmas.h:
+
+../LogisticaDeTurmas.cpp:
 
 ../Menu.cpp:
 
 ../ReadFiles.cpp:
-
-../TrocaDeTurmas.h:
 
 ../Turma.cpp:
 
