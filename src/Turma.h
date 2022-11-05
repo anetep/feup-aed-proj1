@@ -28,7 +28,9 @@ public:
 
     string getClassCode() const;
 
-    //int getClassCapacity() const;
+    string setUcCode(string ucCode);
+
+    string setClassCode(string classCode);
 
 };
 

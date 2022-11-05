@@ -22,3 +22,11 @@ string Turma::getUcCode() const{
 string Turma::getClassCode() const{
     return classCode;
 }
+
+string Turma::setUcCode(string ucode){
+    this->ucCode = ucode;
+}
+
+string Turma::setClassCode(string ccode){
+    this->classCode = ccode;
+}
