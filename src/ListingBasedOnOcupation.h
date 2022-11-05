@@ -13,11 +13,11 @@
 
 class ListingBasedOnOcupation {
 public:
-    vector <pair<string, string>> compareClassOcupation(vector<Estudante> &estudantes, string classD);
-    void printClassOcupation(vector<Estudante> &estudantes, string classD);
+    vector <pair<string, string>> compareStudentsInClass(string classCode, vector<Estudante> &students);
+    void printStudentsInClass(string classCode, vector<Estudante> &students);
 
-    vector <pair<string, string>> compareUcOcupation(vector<Estudante> &estudantes, string uc);
-    void printUcOcupation(vector<Estudante> &estudantes, string uc);
+    vector <pair<string, string>> compareStudentsInUc(string ucCode, vector<Estudante> &students);
+    void printStudentsInUc(string ucCode, vector<Estudante> &students);
 
 };
 

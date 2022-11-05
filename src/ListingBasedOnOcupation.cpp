@@ -5,11 +5,11 @@
 #include "ListingBasedOnOcupation.h"
 //compara por classes
 // retorna pair com nome do estudante e o código da uc a que ele está naquela cadeira
-vector <pair<string, string>> ListingBasedOnOcupation::compareClassOcupation(vector<Estudante> &estudantes, string classD){
+vector <pair<string, string>> ListingBasedOnOcupation::compareStudentsInClass(string classCode, vector<Estudante> &students){
     vector<pair<string, string>> studOcup;
-    for (const auto &st: estudantes){
+    for (const auto &st: students){
         for (const auto &turm: st.getStudentSchedule()){
-            if (turm.getClassCode() == classD){
+            if (turm.getClassCode() == classCode){
                 pair<string, string> aux = {st.getStudentName(), turm.getUcCode()};
                 studOcup.push_back(aux);
             }
@@ -20,11 +20,11 @@ vector <pair<string, string>> ListingBasedOnOcupation::compareClassOcupation(vec
 
 //compara por classes
 // retorna pair com nome do estudante e o cod da turma a que ele está naquela cadeira
-vector <pair<string, string>> ListingBasedOnOcupation::compareUcOcupation(vector<Estudante> &estudantes, string uc){
+vector <pair<string, string>> ListingBasedOnOcupation::compareStudentsInUc(string ucCode, vector<Estudante> &students){
     vector<pair<string, string>> studOcup;
-    for (const auto &st: estudantes){
+    for (const auto &st: students){
         for (const auto &turm: st.getStudentSchedule()){
-            if (turm.getUcCode() == uc){
+            if (turm.getUcCode() == ucCode){
                 pair<string, string> aux = {st.getStudentName(), turm.getClassCode()};
                 studOcup.push_back(aux);
             }
@@ -33,12 +33,12 @@ vector <pair<string, string>> ListingBasedOnOcupation::compareUcOcupation(vector
     return studOcup;
 }
 
-void ListingBasedOnOcupation::printClassOcupation(vector<Estudante> &estudantes, string classD){
+void ListingBasedOnOcupation::printStudentsInClass(string classCode, vector<Estudante> &students){
 
     cout << "--------------------" << endl;
-    cout << "Ocupantes da turma: " << classD << endl;
+    cout << "Ocupantes da turma: " << classCode << endl;
     cout << "--------------------" << endl;
-    vector<pair<string, string>> res = compareClassOcupation(estudantes, classD);
+    vector<pair<string, string>> res = compareStudentsInClass(classCode, students);
     for (auto r: res){
         cout << r.first << " na unidade curricular " << r.second << endl;
     }
@@ -46,11 +46,11 @@ void ListingBasedOnOcupation::printClassOcupation(vector<Estudante> &estudantes,
 }
 
 
-void ListingBasedOnOcupation::printUcOcupation(vector<Estudante> &estudantes, string uc){
+void ListingBasedOnOcupation::printStudentsInUc(string ucCode, vector<Estudante> &students){
     cout << "--------------------" << endl;
-    cout << "Alunos inscritos na cadeira: " << uc << endl;
+    cout << "Alunos inscritos na cadeira: " << ucCode << endl;
     cout << "--------------------" << endl;
-    vector<pair<string, string>> res = compareUcOcupation(estudantes, uc);
+    vector<pair<string, string>> res = compareStudentsInUc(ucCode, students);
     for (auto r: res){
         cout << r.first << " na turma " << r.second << endl;
     }
