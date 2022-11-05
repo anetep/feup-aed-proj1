@@ -35,26 +35,24 @@ vector <pair<string, string>> ListingBasedOnOcupation::compareStudentsInUc(strin
 
 void ListingBasedOnOcupation::printStudentsInClass(string classCode, vector<Estudante> &students){
 
-    cout << "--------------------" << endl;
+    cout << "--------------------------------------" << endl;
     cout << "Ocupantes da turma: " << classCode << endl;
-    cout << "--------------------" << endl;
+    cout << "--------------------------------------" << endl;
     vector<pair<string, string>> res = compareStudentsInClass(classCode, students);
     for (auto r: res){
         cout << r.first << " na unidade curricular " << r.second << endl;
     }
-    cout << "===================" << endl;
 }
 
 
 void ListingBasedOnOcupation::printStudentsInUc(string ucCode, vector<Estudante> &students){
-    cout << "--------------------" << endl;
+    cout << "--------------------------------------" << endl;
     cout << "Alunos inscritos na cadeira: " << ucCode << endl;
-    cout << "--------------------" << endl;
+    cout << "--------------------------------------" << endl;
     vector<pair<string, string>> res = compareStudentsInUc(ucCode, students);
     for (auto r: res){
         cout << r.first << " na turma " << r.second << endl;
     }
-    cout << "===================" << endl;
 }
 
 
