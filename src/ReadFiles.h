@@ -24,7 +24,7 @@ public:
     vector<Estudante> joinStudentClases(vector <Estudante> &fromFile);
     vector<Aula> readClassesFile();
     vector<Turma> readClassesPerUcFile();
-
+//se remover o tipo vector e substituir por set se tornará uma arvore binária (verificar alteraçõe sno código depois)
 };
 
 

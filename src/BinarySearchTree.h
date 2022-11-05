@@ -19,10 +19,24 @@ template <class Comparable> class BST;
 
 template <class Comparable>
 class BinaryNode {
+    /**
+     * Elemento.
+     */
     Comparable element;
+    /**
+     * Node da esquerda.
+     */
     BinaryNode *left;
+    /**
+     * Node da direita.
+     */
     BinaryNode *right;
+
+
     BinaryNode(const Comparable& theElement, BinaryNode* lt, BinaryNode* rt): element(theElement), left(lt), right(rt) { }
+    /**
+		  * Construtor da classe.
+		  */
     friend class BST<Comparable>;
     friend class BSTItrIn<Comparable>;
     friend class BSTItrPre<Comparable>;
@@ -33,7 +47,13 @@ class BinaryNode {
 
 template <class Comparable>
 class BST {
+    /**
+     * Raiz da arvore binária, node inicial.
+     */
     BinaryNode<Comparable> *root;
+    /**
+     *
+     */
     const Comparable ITEM_NOT_FOUND;
 
     const Comparable& elementAt(BinaryNode<Comparable>* t) const;
