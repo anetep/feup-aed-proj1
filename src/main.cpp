@@ -21,19 +21,16 @@
 
 
 
+
+
 int main() {
+
     ReadFiles o;
-    vector<Estudante> estudantes = o.readStudentsFile();
+    vector<Estudante> students = o.readStudentsFile();
 
-    ListingBasedOnOcupation r;
-    TrocaDeTurmas h;
+    ListingBasedOnOcupation a;
+    a.printUcNumberOfStudentsSortedByUc(students);
 
-    LogisticaDeTurmas l;
-    l.printStudentSchedule(201071357, estudantes);
-
-    h.removeStudentFromClass(201071357, "3LEIC08", estudantes);
-
-    l.printStudentSchedule(201071357, estudantes);
 
     return 0;
 }

@@ -9,7 +9,7 @@ using namespace std;
 
 // retorna um vector com todos os estudantes do ficheiro
 vector<Estudante> ReadFiles::readStudentsFile(){
-    ifstream in("helper_students.txt");
+    ifstream in("students_classes.txt");
     string line;
     char* dup;
 

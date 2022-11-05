@@ -56,3 +56,40 @@ void ListingBasedOnOcupation::printStudentsInUc(string ucCode, vector<Estudante>
     }
     cout << "===================" << endl;
 }
+
+
+
+vector<string> ListingBasedOnOcupation::getAllUniqueUcsFromStudentsEnrolled(vector<Estudante> &students){
+    vector<string> allUcs;
+    for (auto &st : students){
+        for (auto &turma : st.getStudentSchedule()){
+            allUcs.push_back(turma.getUcCode());
+        }
+    }
+    sort(allUcs.begin(), allUcs.end());
+    allUcs.erase(unique(allUcs.begin(), allUcs.end()), allUcs.end());
+
+    return allUcs;
+}
+
+
+int ListingBasedOnOcupation::getUcNumberOfStudentsSortedByUc(string ucCode, vector<Estudante> &students){
+    int counter = 0;
+    for (auto &st : students){
+        for (auto &turma : st.getStudentSchedule()){
+            if (turma.getUcCode() == ucCode){
+                counter ++;
+            }
+        }
+    }
+    return counter;
+}
+
+void ListingBasedOnOcupation::printUcNumberOfStudentsSortedByUc(vector<Estudante> &students){
+    vector<string> allUcs = getAllUniqueUcsFromStudentsEnrolled(students);
+
+    cout << "========== Ucs number of students enrolled ============" << endl;
+    for (auto &uc : allUcs){
+        cout << uc << " : " << getUcNumberOfStudentsSortedByUc(uc, students) << endl;
+    }
+}

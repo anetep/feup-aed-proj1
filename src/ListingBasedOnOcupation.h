@@ -19,6 +19,10 @@ public:
     vector <pair<string, string>> compareStudentsInUc(string ucCode, vector<Estudante> &students);
     void printStudentsInUc(string ucCode, vector<Estudante> &students);
 
+    vector<string> getAllUniqueUcsFromStudentsEnrolled(vector<Estudante> &students);
+    int getUcNumberOfStudentsSortedByUc(string ucCode, vector<Estudante> &students);
+    void printUcNumberOfStudentsSortedByUc(vector<Estudante> &students);
+
 };
 
 
