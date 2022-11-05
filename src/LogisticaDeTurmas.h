@@ -28,7 +28,6 @@ public:
     void printAllUcs();
 
     Estudante getStudentWithCodeX(int studentCode, vector<Estudante> &students);
-    Estudante getStudentFromFile(int studentCode);
     vector<Aula> turnStudentClassesToLessons(Estudante &student);
     string convertFloatToTime(float hour);
     void printStudentSchedule(int studentCode, vector<Estudante> &students);

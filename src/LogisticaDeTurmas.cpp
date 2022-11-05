@@ -145,18 +145,6 @@ Estudante LogisticaDeTurmas::getStudentWithCodeX(int studentCode, vector<Estudan
     return res; // se não houver retorna estudante vazio
 }
 
-Estudante LogisticaDeTurmas::getStudentFromFile(int studentCode){
-    ReadFiles o;
-    vector<Estudante> allSt = o.readStudentsFile();
-
-    for (auto &st : allSt){
-        if (st.getStudentCode() == studentCode) return st;
-    }
-    Estudante a;
-    // se não existir retorna estudante vazio
-    return a;
-}
-
 vector<Aula> LogisticaDeTurmas::turnStudentClassesToLessons(Estudante &student){
     ReadFiles o;
     list<Turma> turmas = student.getStudentSchedule();
