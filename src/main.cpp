@@ -31,7 +31,7 @@ int main() {
     r.printClassOcupation(estudantes, "3LEIC08");
 
     TrocaDeTurmas h;
-    h.removeStudentFromUcAndClass(201071357, "L.EIC023", "3LEIC08", estudantes);
+    h.removeStudentFromClass(201071357, "3LEIC08", estudantes);
 
     r.printClassOcupation(estudantes, "3LEIC08");
 

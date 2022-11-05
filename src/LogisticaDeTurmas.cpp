@@ -205,47 +205,5 @@ void LogisticaDeTurmas::printStudentSchedule(int studentCode){
     }
 }
 
-// ============================= Remover estudante de Turma ou Uc =================================
 
-vector<Estudante> LogisticaDeTurmas::removeStudentFromClass(int studentCode, string classCode, vector<Estudante> &estudantes){
-    vector<Estudante> novo;
-    list<Turma> newTurmas;
 
-    for (auto &st : estudantes){
-        for (auto &turma : st.getStudentSchedule()){
-            if (st.getStudentCode() == studentCode && turma.getClassCode() == classCode){}
-            else newTurmas.push_back(turma);
-        }
-        st.setStudentClasses(newTurmas);
-        novo.push_back(st);
-        newTurmas.clear();
-    }
-    return novo;
-}
-vector<Estudante> LogisticaDeTurmas::removeStudentFromUc(int studentCode, string ucCode, vector<Estudante> &estudantes){
-    vector<Estudante> novo;
-    list<Turma> newTurmas;
-
-    for (auto &st : estudantes){
-        for (auto &turma : st.getStudentSchedule()){
-            if (st.getStudentCode() == studentCode && turma.getUcCode() == ucCode){}
-            else newTurmas.push_back(turma);
-        }
-        st.setStudentClasses(newTurmas);
-        novo.push_back(st);
-        newTurmas.clear();
-    }
-    return novo;
-}
-
-void LogisticaDeTurmas::printStudentRemovedFromClass(int studentCode, string classCode, vector<Estudante> &estudantes){
-    ListingBasedOnOcupation r;
-    vector<Estudante> newStudents = removeStudentFromClass(studentCode, classCode, estudantes);
-    r.printClassOcupation(newStudents, classCode);
-}
-
-void LogisticaDeTurmas::printStudentRemovedFromUc(int studentCode, string ucCode, vector<Estudante> &estudantes){
-    ListingBasedOnOcupation r;
-    vector<Estudante> newStudents = removeStudentFromUc(studentCode, ucCode, estudantes);
-    r.printUcOcupation(newStudents, ucCode);
-}
