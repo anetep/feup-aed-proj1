@@ -21,19 +21,19 @@
 
 
 
-
-
 int main() {
     ReadFiles o;
     vector<Estudante> estudantes = o.readStudentsFile();
 
     ListingBasedOnOcupation r;
-    r.printClassOcupation(estudantes, "3LEIC08");
-
     TrocaDeTurmas h;
+
+    LogisticaDeTurmas l;
+    l.printStudentSchedule(201071357, estudantes);
+
     h.removeStudentFromClass(201071357, "3LEIC08", estudantes);
 
-    r.printClassOcupation(estudantes, "3LEIC08");
+    l.printStudentSchedule(201071357, estudantes);
 
     return 0;
 }

@@ -31,7 +31,7 @@ public:
     Estudante getStudentFromFile(int studentCode);
     vector<Aula> turnStudentClassesToLessons(Estudante &student);
     string convertFloatToTime(float hour);
-    void printStudentSchedule(int studentCode);
+    void printStudentSchedule(int studentCode, vector<Estudante> &students);
 
 
 };
