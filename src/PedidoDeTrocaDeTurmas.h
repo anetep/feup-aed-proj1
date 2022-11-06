@@ -6,8 +6,32 @@
 #define SRC_PEDIDODETROCADETURMAS_H
 
 
-class PedidoDeTrocaDeTurmas {
+#include "Estudante.h"
 
+class PedidoDeTrocaDeTurmas {
+private:
+    Estudante studentToChange;
+    Turma oldClass;
+    Turma newClass;
+    list<Turma> classesToChange;
+public:
+    PedidoDeTrocaDeTurmas();
+
+    // Para alterar a turma/UC de um estudante
+    PedidoDeTrocaDeTurmas(Estudante st, Turma oldCl, Turma newCl);
+
+    // TODO: Para alterar um conjunto de turmas/UCs. Falta corrigit o classes to change para pegar antigas e novas turmas
+    //PedidoDeTrocaDeTurmas(Estudante st, Turma oldCl, Turma newCl, list<Turma> classes);
+
+    Estudante getStudentToChange() const;
+    Turma getOldClass() const;
+    Turma getNewClass() const;
+    //list<Turma> getClassesToChange() const;
+
+    void setStudentToChange(Estudante st);
+    void setOldClass(Turma cl);
+    void setNewClass(Turma cl);
+    //void setClassesToChange(list<Turma> classes);
 };
 
 

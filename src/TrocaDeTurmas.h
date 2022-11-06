@@ -14,7 +14,11 @@ class TrocaDeTurmas {
 public:
     int getClassOccupation(string ucCode, string classCode, vector<Estudante> &students);
     vector<Aula> getLessonBasedOnClassAndUc(string ucCode, string classCode);
+
+    // retorna true se há sobreposição, o estudante não pode ser mudado
     bool verifyScheduleSobreposion(int studentCode, string ucCode, string classCode, vector<Estudante> &students);
+
+    // retorna true se há equilíbrio entre as salas
     bool verifyClassesEquilibrium(string oldUcCode, string oldClassCode, string newUcCode, string newClassCode, vector<Estudante> &students);
     vector<Estudante> addStudentToUcAndClass(int studentCode, string ucCode, string classCode, vector<Estudante> &students);
 
