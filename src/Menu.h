@@ -19,7 +19,7 @@ using namespace std;
 class Menu {
 
 public:
-    Menu();
+    //Menu();
     /**
     *   \brief Funcão que exibe o menu Contagem
     */
@@ -54,6 +54,11 @@ public:
     */
 
     static void showMenuOccupationOrder(); // Informa a ordem
+
+    /**
+    *   \brief Função que exibe o Menu principal
+    */
+    int showGeneralMenu();
 };
 
 
