@@ -41,11 +41,34 @@ public:
 		  * @brief Faz print de todos os estudantes ordenados pelo seu StudentCode.
 		  */
     void printAllStudentsOrderedByNum();
+    /**
+		  * @brief Faz print de todos os códigos de turmas.
+		  */
     void printAllClasses();
+    /**
+         * @brief Faz print de todas as UC's.
+         */
     void printAllUcs();
 
+    /**
+         * @brief Busca num vector students um estudante com um StudentCode igual ao selecionado.
+         * @param studentCode:Número de um estudante.
+         * @param students:vector de objetos do tipo Estudante (Lista de estudantes).
+         * @return Retorna um objeto de tipo Estudante se este tiver o mesmo studentCode que o solicitado, caso contrário retorna um estudante vazio.
+         */
     Estudante getStudentWithCodeX(int studentCode, vector<Estudante> &students);
+    /**
+         * @brief Busca num file com objetos da classe Estudante um estudante com um StudentCode igual ao selecionado.
+         * @param studentCode:Número de um estudante.
+         * @return Retorna um objeto de tipo Estudante se este tiver o mesmo studentCode que o solicitado, caso contrário retorna um estudante vazio.
+         */
     Estudante getStudentFromFile(int studentCode);
+    /**
+         * @brief Busca num vector students um estudante com um StudentCode igual ao selecionado.
+         * @param studentCode:Número de um estudante.
+         * @param students:vector de objetos do tipo Estudante (Lista de estudantes).
+         * @return Retorna um objeto de tipo Estudante se este tiver o mesmo studentCode que o solicitado.
+         */
     vector<Aula> turnStudentClassesToLessons(Estudante &student);
     string convertFloatToTime(float hour);
     void printStudentSchedule(int studentCode);
