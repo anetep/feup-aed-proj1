@@ -15,6 +15,7 @@
 #include "PedidoDeTrocaDeTurmas.h"
 #include "Aula.h"
 #include "Estudante.h"
+#include <queue>
 using namespace std;
 
 /**

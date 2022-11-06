@@ -9,6 +9,9 @@ vector<Estudante> students = o.readStudentsFile();
 
 LogisticaDeTurmas logistica;
 ListingBasedOnOcupation listing;
+TrocaDeTurmas troca;
+
+queue<PedidoDeTrocaDeTurmas> pedidosDeTroca;
 
 
 void Menu::showMenuOccupation() {
@@ -53,10 +56,164 @@ void Menu::showMenuOccupation() {
 }
 
 
+void Menu::showMenuChangeOfClasses() {
+    int input;
+    cout << "Menu Alunos\n"
+         << "1. Remover estudante de uma uc\n"
+         << "2. Remover estudante de uma turma\n"
+         << "3. Remover estudante de uma uc/turma\n"
+         << "4. Adicionar estudante a uma uc/turma\n"
+         << "5. Trocar estudante de uc/turma\n"
+         << "6. Sair\n"
+         << "Escolha uma das opcoes! ";
+    do {
+        cin >> input;
+        switch (input) {
+            case 1:
+            {
+                // remover estudante de uma uc
+                int studentCode;
+                string ucCode;
+                cout << "Digite o numero de estudante: "; cin >> studentCode;
+                cout << "Digite o codigo da uc: "; cin >> ucCode;
+                while (cin.fail())
+                {
+                    cerr << "Introduziu um numero de estudante errado, por favor tente novamente" << endl;
+                    cin.clear();
+                    cin.ignore(256, '\n');
+                    cin >> studentCode;
+                }
+                cout << "================================= Turmas antigas ================================="  << endl;
+                logistica.printStudentSchedule(studentCode, students);
+                troca.removeStudentFromUc(studentCode, ucCode, students); // remove uc
+                cout << "================================= Turmas novas ================================="  << endl;
+                logistica.printStudentSchedule(studentCode, students);
+                showMenuChangeOfClasses();
+                break;
+            }
+            case 2:
+            {
+                // remover estudante de uma turma
+                int studentCode;
+                string classCode;
+                cout << "Digite o numero de estudante: "; cin >> studentCode;
+                cout << "Digite o codigo da turma: "; cin >> classCode;
+                while (cin.fail())
+                {
+                    cerr << "Introduziu um numero de estudante errado, por favor tente novamente" << endl;
+                    cin.clear();
+                    cin.ignore(256, '\n');
+                    cin >> studentCode;
+                }
+                cout << "================================= Turmas antigas ================================="  << endl;
+                logistica.printStudentSchedule(studentCode, students);
+                troca.removeStudentFromClass(studentCode, classCode, students); // remove uc
+                cout << "================================= Turmas novas ================================="  << endl;
+                logistica.printStudentSchedule(studentCode, students);
+
+                showMenuChangeOfClasses();
+                break;
+            }
+            case 3: {
+                // remover estudante de uma uc/turma
+                int studentCode;
+                string classCode;
+                string ucCode;
+                cout << "Digite o numero de estudante: "; cin >> studentCode;
+                cout << "Digite o codigo da uc: "; cin >> ucCode;
+                cout << "Digite o codigo da turma: "; cin >> classCode;
+
+
+                while (cin.fail())
+                {
+                    cerr << "Introduziu um input errado por favor tente novamente" << endl;
+                    cin.clear();
+                    cin.ignore(256, '\n');
+                    cin >> studentCode;
+                }
+                cout << "================================= Turmas antigas ================================="  << endl;
+                logistica.printStudentSchedule(studentCode, students);
+                troca.removeStudentFromUcAndClass(studentCode, ucCode, classCode, students); // remove uc
+                cout << "================================= Turmas novas ================================="  << endl;
+                logistica.printStudentSchedule(studentCode, students);
+
+                showMenuChangeOfClasses();
+                break;
+            }
+            case 4: {
+                // adicionar estudante a uma uc/turma
+                int studentCode;
+                string ucCode;
+                string classCode;
+
+                cout << "Digite o numero de estudante: "; cin >> studentCode;
+                cout << "Digite o codigo da uc que deseja ir: "; cin >> ucCode;
+                cout << "Digite o codigo da turma que deseja ir: "; cin >> classCode;
+
+                while (cin.fail())
+                {
+                    cerr << "Introduziu um input errado por favor tente novamente" << endl;
+                    cin.clear();
+                    cin.ignore(256, '\n');
+                    cin >> studentCode;
+                }
+
+                cout << "================================= Turmas antigas ================================="  << endl;
+                logistica.printStudentSchedule(studentCode, students);
+                troca.addStudentToUcAndClass(studentCode, ucCode, classCode, students); // troca uc e turma
+                cout << "================================= Turmas novas ================================="  << endl;
+                logistica.printStudentSchedule(studentCode, students);
+
+
+                showMenuChangeOfClasses();
+                break;
+            }
+            case 5: {
+                // trocar estudante de uma uc/turma para outra uc/turma
+                int studentCode;
+                string oldUc;
+                string oldClass;
+                string newUc;
+                string newClass;
+
+                cout << "Digite o numero de estudante: "; cin >> studentCode;
+                cout << "Digite o codigo da uc que quer sair: "; cin >> oldUc;
+                cout << "Digite o codigo da turma que quer sair: "; cin >> oldClass;
+                cout << "Digite o codigo da uc que deseja ir: "; cin >> newUc;
+                cout << "Digite o codigo da turma que deseja ir: "; cin >> newClass;
+                while (cin.fail())
+                {
+                    cerr << "Introduziu um input errado por favor tente novamente" << endl;
+                    cin.clear();
+                    cin.ignore(256, '\n');
+                    cin >> studentCode;
+                }
+
+                PedidoDeTrocaDeTurmas pedido(studentCode, Turma(oldUc, oldClass), Turma(newUc, newClass));
+                pedidosDeTroca.push(pedido); // guarda todos os pedidos na queue
+
+                cout << "================================= Turmas antigas ================================="  << endl;
+                logistica.printStudentSchedule(studentCode, students);
+                troca.changeStudentClass(pedido, students); // troca uc e turma
+                cout << "================================= Turmas novas ================================="  << endl;
+                logistica.printStudentSchedule(studentCode, students);
+                showMenuChangeOfClasses();
+                break;
+            }
+            case 6: {
+                exit(0);
+            }
+            default:
+                cerr << "Input invalido, por favor tente novamente:" << endl;
+                break;
+        }
+    }while (input != 6);
+}
 
 
 
-//TODO corrigir se o input for inválido
+
+
 void Menu::showMenuHorario() {
     int studentCode;
     cout << "Digite o numero de estudante: "; cin >> studentCode;
@@ -133,10 +290,12 @@ int Menu::showGeneralMenu(){
                 cout<<"Escolheu:5. Visualizar Alunos inscritos numa Unidade Curricular\n"
                     << "-------------------------\n";
                 showMenuUnidadeCurricular();
+                break;
             case 6:
                 cout<< "Escolheu:6. Visualizar estudantes com n Uc's\n"
                     << "-------------------------\n";
                 showMenuStudentSomeUCs();
+                break;
             case 7:
                 cout<< "Escolheu:7. Listing de Uc's\n"
                     << "-------------------------\n";

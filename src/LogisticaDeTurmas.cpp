@@ -174,7 +174,6 @@ string LogisticaDeTurmas::convertFloatToTime(float hour){
     return res;
 }
 
-//TODO corrigir o getStudentFromFile para receber o vector de estudantes em vez de ir buscar no ficheiro
 void LogisticaDeTurmas::printStudentSchedule(int studentCode, vector<Estudante> &students){
     Estudante stud = getStudentWithCodeX(studentCode, students);
     vector<Aula> aulas = turnStudentClassesToLessons(stud);

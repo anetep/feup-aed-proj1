@@ -27,7 +27,6 @@ public:
     vector<Turma> removeDuplicateUcsAndClasses(vector<Turma> &aulas);
     vector<Turma> getAllUniqueUcsAndClassesFromStudentsEnrolled(vector<Estudante> &students);
 
-    //FIXME para nr elevado de estudantes
     void printNumberOfStudentsInAllClass(vector<Estudante> &students);
 
     int getYearNumberOfStudents(int year, vector<Estudante> &students);

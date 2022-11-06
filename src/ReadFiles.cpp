@@ -100,7 +100,7 @@ vector<Aula> ReadFiles::readClassesFile(){
 
 
 vector<Turma> ReadFiles::readClassesPerUcFile(){
-    ifstream in("helper_per_uc.txt");
+    ifstream in("classes_per_uc.txt");
     string line;
 
     char* dup;

@@ -20,7 +20,6 @@ public:
     // Para alterar a turma/UC de um estudante
     PedidoDeTrocaDeTurmas(int st, Turma oldCl, Turma newCl);
 
-    // TODO: Para alterar um conjunto de turmas/UCs. Falta corrigit o classes to change para pegar antigas e novas turmas
     //PedidoDeTrocaDeTurmas(int st, Turma oldCl, Turma newCl, list<Turma> classes);
 
     int getStudentToChangeCode() const;

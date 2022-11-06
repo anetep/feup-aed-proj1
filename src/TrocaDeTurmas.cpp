@@ -174,8 +174,8 @@ vector<Estudante> TrocaDeTurmas::changeStudentClass(PedidoDeTrocaDeTurmas &p, ve
     string newClass = p.getNewClass().getClassCode();
 
     if (!verifyIfStudentCanChangeClass(studentCode, oldUc, oldClass, newUc, newClass, students)){
-        cerr << "Operacao anulada!! Nao pode mudar o estudante da turma " << oldClass << "da uc " << oldUc
-             << " para a turma " << newClass << "da uc " << newUc << " porque ha conflitos no horario." << endl;
+        /*cerr << "Operacao anulada!! Nao pode mudar o estudante da turma " << oldClass << "da uc " << oldUc
+             << " para a turma " << newClass << "da uc " << newUc << " porque ha conflitos no horario." << endl;*/
         return students;
     }
 
