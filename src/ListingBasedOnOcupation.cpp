@@ -139,3 +139,27 @@ void ListingBasedOnOcupation::printNumberOfStudentsInAllClass(vector<Estudante> 
         cout << parUcClass.getUcCode() << "  " << parUcClass.getClassCode() << " : " << num.getClassOccupation(parUcClass.getUcCode(), parUcClass.getClassCode(), students) << endl;
     }
 }
+
+
+int ListingBasedOnOcupation::getYearNumberOfStudents(int year, vector<Estudante> &students){
+    int numberOfStudentsInYearN = 0;
+
+    for (auto &st: students){
+        for (auto &turma : st.getStudentSchedule()){
+            int aux = (int)(turma.getClassCode()[0]) - '0';
+            if ( aux == year){
+                numberOfStudentsInYearN++;
+                break; // para não verificar mais do que uma vez
+            }
+        }
+    }
+    return numberOfStudentsInYearN;
+}
+
+void ListingBasedOnOcupation::printNumberOfStudentsPerYear(vector<Estudante> &students){
+
+    cout << "Nr de estudantes no 1o ano: " << getYearNumberOfStudents(1, students) << endl;
+    cout << "Nr de estudantes no 2o ano: " << getYearNumberOfStudents(2, students) << endl;
+    cout << "Nr de estudantes no 3o ano: " << getYearNumberOfStudents(3, students) << endl;
+
+}

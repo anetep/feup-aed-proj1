@@ -29,6 +29,8 @@ public:
 
     void printNumberOfStudentsInAllClass(vector<Estudante> &students);
 
+    int getYearNumberOfStudents(int year, vector<Estudante> &students);
+    void printNumberOfStudentsPerYear(vector<Estudante> &students);
     };
 
 

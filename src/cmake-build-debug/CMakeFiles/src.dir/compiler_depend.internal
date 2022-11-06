@@ -620,6 +620,7 @@ CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj
  C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/string.h
  C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h
  C:/universidade/aed/feup-aed-proj1/src/TrocaDeTurmas.h
+ C:/universidade/aed/feup-aed-proj1/src/PedidoDeTrocaDeTurmas.h
  C:/universidade/aed/feup-aed-proj1/src/LogisticaDeTurmas.h
  C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath
  C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/math.h
@@ -797,6 +798,7 @@ CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj
  C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h
  C:/universidade/aed/feup-aed-proj1/src/ListingBasedOnOcupation.h
  C:/universidade/aed/feup-aed-proj1/src/TrocaDeTurmas.h
+ C:/universidade/aed/feup-aed-proj1/src/PedidoDeTrocaDeTurmas.h
  C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath
  C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/math.h
 
@@ -1308,6 +1310,7 @@ CMakeFiles/src.dir/TrocaDeTurmas.cpp.obj
  C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/sstream.tcc
  C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/string.h
  C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h
+ C:/universidade/aed/feup-aed-proj1/src/PedidoDeTrocaDeTurmas.h
  C:/universidade/aed/feup-aed-proj1/src/LogisticaDeTurmas.h
  C:/universidade/aed/feup-aed-proj1/src/ListingBasedOnOcupation.h
  C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath
@@ -1634,7 +1637,7 @@ CMakeFiles/src.dir/main.cpp.obj
  C:/universidade/aed/feup-aed-proj1/src/LogisticaDeTurmas.h
  C:/universidade/aed/feup-aed-proj1/src/ListingBasedOnOcupation.h
  C:/universidade/aed/feup-aed-proj1/src/TrocaDeTurmas.h
+ C:/universidade/aed/feup-aed-proj1/src/PedidoDeTrocaDeTurmas.h
  C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath
  C:/Program Files/JetBrains/CLion 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/math.h
- C:/universidade/aed/feup-aed-proj1/src/PedidoDeTrocaDeTurmas.h
 
