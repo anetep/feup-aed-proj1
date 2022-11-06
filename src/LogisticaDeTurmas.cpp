@@ -141,7 +141,7 @@ Estudante LogisticaDeTurmas::getStudentWithCodeX(int studentCode, vector<Estudan
     for (auto &st : students){
         if (st.getStudentCode() == studentCode) return st;
     }
-    cout << "Não existe estudante com esse número" << endl;
+    cerr << "Nao existe estudante com esse numero" << endl;
     return res; // se não houver retorna estudante vazio
 }
 

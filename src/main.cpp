@@ -14,6 +14,10 @@
 int main() {
     Menu m;
     m.showGeneralMenu();
+    ReadFiles o;
+    vector<Estudante> st = o.readStudentsFile();
+    LogisticaDeTurmas l;
+
 
     return 0;
 }

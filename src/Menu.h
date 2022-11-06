@@ -62,9 +62,15 @@ public:
     static void showMenuOccupationOrder(); // Informa a ordem
 
     /**
+    *   \brief Função que exibe o Menu para remover, adicionar ou trocar de turmas
+    */
+    void showMenuChangeOfClasses();
+
+    /**
     *   \brief Função que exibe o Menu principal
     */
     int showGeneralMenu();
+
 };
 
 

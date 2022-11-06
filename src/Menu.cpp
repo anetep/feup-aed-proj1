@@ -52,9 +52,21 @@ void Menu::showMenuOccupation() {
     }while (input != 4);
 }
 
+
+
+
+
+//TODO corrigir se o input for inválido
 void Menu::showMenuHorario() {
     int studentCode;
     cout << "Digite o numero de estudante: "; cin >> studentCode;
+    while (cin.fail())
+    {
+        cerr << "Introduziu um numero de estudante errado, por favor tente novamente" << endl;
+        cin.clear();
+        cin.ignore(256, '\n');
+        cin >> studentCode;
+    }
     logistica.printStudentSchedule(studentCode, students);
 }
 void Menu::showMenuTurma() {
@@ -75,40 +87,6 @@ void Menu::showMenuStudentSomeUCs() {
     cout<< "Digite o numero de Unidades Curriculares: "; cin >> num;
     listing.printStudentsWithMoreThanNUcs(num, students);
 }
-/*void Menu::showMenuOccupationOrder() {
-    int input;
-    cout<< "Menu Ordem\n"
-        << "1. Ordenar por Uc\n"
-        << "2. Ordem ascendente\n"
-        << "3. Ordem descendente\n"
-        << "4. Sair\n";
-    do{
-        cin>> input;
-        switch (input) {
-            case 1:
-                // mostrar por ordem de uc
-                break;
-            case 2:
-                //ordem ascendente
-                break;
-            case 3:
-                //ordem descendente
-                break;
-            case 4:
-                break;
-            default:
-                cout << "Input invalido, por favor tente outra vez:" << endl;
-                break;
-        }
-        if (input=!4){
-            cout<< "Menu Ordem\n"
-                << "1. Ordenar por Uc\n"
-                << "2. Ordem ascendente\n"
-                << "3. Ordem descendente\n"
-                << "4. Sair\n";
-        }
-    }while(input!=4);
-}*/
 
 int Menu::showGeneralMenu(){
 
@@ -120,7 +98,10 @@ int Menu::showGeneralMenu(){
          << "3. Visualizar Horario de estudante de acordo com o seu numero\n"
          << "4. Visualizar estudantes Inscritos numa Turma\n"
          << "5. Visualizar estudantes inscritos numa Unidade Curricular\n"
-         << "6. Visualizar estudantes com mais do que n Uc's\n";
+         << "6. Visualizar estudantes com mais do que n Uc's\n"
+         << "7. Listing de todas as Unidades Curriculares disponiveis no sistema\n"
+         << "8. Listing de todas as turmas disponiveis no sistema\n"
+         << "9. Operacoes para adicionar, remover e trocar de turma\n";
     cout << "Escolha uma das opcoes!\n ";
     do {
         cin >> escolha1;
@@ -134,28 +115,43 @@ int Menu::showGeneralMenu(){
                 logistica.printAllStudentsOrderedByNum(students);
                 break;
             case 2:
-                cout<< "escolheu: 4. Contagem de alunos\n";
+                cout<< "escolheu: 2. Contagem de alunos\n";
                 cout << "-------------------------\n";
                 showMenuOccupation();
                 break;
             case 3:
-                cout<<"Escolheu: 5.Visualizar Horario\n "
+                cout<<"Escolheu: 3.Visualizar Horario\n "
                     << "-------------------------\n";
                 showMenuHorario();
                 break;
             case 4:
-                cout<<"Escolheu: 6. Visualizar Turma\n "
+                cout<<"Escolheu: 4. Visualizar Turma\n "
                     << "-------------------------\n";
                 showMenuTurma();
                 break;
             case 5:
-                cout<<"Escolheu:7. Visualizar Alunos inscritos numa Unidade Curricular\n"
+                cout<<"Escolheu:5. Visualizar Alunos inscritos numa Unidade Curricular\n"
                     << "-------------------------\n";
                 showMenuUnidadeCurricular();
             case 6:
-                cout<< "Escolheu:8. Visualizar estudantes com n Uc's\n"
+                cout<< "Escolheu:6. Visualizar estudantes com n Uc's\n"
                     << "-------------------------\n";
                 showMenuStudentSomeUCs();
+            case 7:
+                cout<< "Escolheu:7. Listing de Uc's\n"
+                    << "-------------------------\n";
+                logistica.printAllUcs();
+                break;
+            case 8:
+                cout<< "Escolheu:8. Listing de turmas\n"
+                    << "-------------------------\n";
+                logistica.printAllClasses();
+                break;
+            case 9:
+                cout<< "Escolheu:8. Troca de turmas\n"
+                    << "-------------------------\n";
+                showMenuChangeOfClasses();
+                break;
 
         }
         if (escolha1>0 && escolha1){
@@ -165,7 +161,10 @@ int Menu::showGeneralMenu(){
                  << "3. Visualizar Horario de estudante de acordo com o seu numero\n"
                  << "4. Visualizar estudantes Inscritos numa Turma\n"
                  << "5. Visualizar estudantes inscritos numa Unidade Curricular\n"
-                 << "6. Visualizar estudantes com mais do que n Uc's\n";
+                 << "6. Visualizar estudantes com mais do que n Uc's\n"
+                 << "7. Listing de todas as Unidades Curriculares disponiveis no sistema\n"
+                 << "8. Listing de todas as turmas disponiveis no sistema\n"
+                 << "9. Operacoes para adicionar, remover e trocar de turma\n";
             cout << "Escolha uma das opcoes!\n ";
         }
     }
