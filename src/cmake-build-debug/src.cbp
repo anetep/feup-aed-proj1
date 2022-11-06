@@ -118,6 +118,12 @@
 		<Unit filename="C:/universidade/aed/feup-aed-proj1/src/Menu.h">
 			<Option target="src"/>
 		</Unit>
+		<Unit filename="C:/universidade/aed/feup-aed-proj1/src/PedidoDeTrocaDeTurmas.cpp">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="C:/universidade/aed/feup-aed-proj1/src/PedidoDeTrocaDeTurmas.h">
+			<Option target="src"/>
+		</Unit>
 		<Unit filename="C:/universidade/aed/feup-aed-proj1/src/ReadFiles.cpp">
 			<Option target="src"/>
 		</Unit>

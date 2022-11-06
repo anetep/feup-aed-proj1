@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj.d"
   "CMakeFiles/src.dir/Menu.cpp.obj"
   "CMakeFiles/src.dir/Menu.cpp.obj.d"
+  "CMakeFiles/src.dir/PedidoDeTrocaDeTurmas.cpp.obj"
+  "CMakeFiles/src.dir/PedidoDeTrocaDeTurmas.cpp.obj.d"
   "CMakeFiles/src.dir/ReadFiles.cpp.obj"
   "CMakeFiles/src.dir/ReadFiles.cpp.obj.d"
   "CMakeFiles/src.dir/TrocaDeTurmas.cpp.obj"

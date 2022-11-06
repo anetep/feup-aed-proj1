@@ -272,6 +272,30 @@ Menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/Menu.cpp.s
 .PHONY : Menu.cpp.s
 
+PedidoDeTrocaDeTurmas.obj: PedidoDeTrocaDeTurmas.cpp.obj
+.PHONY : PedidoDeTrocaDeTurmas.obj
+
+# target to build an object file
+PedidoDeTrocaDeTurmas.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/PedidoDeTrocaDeTurmas.cpp.obj
+.PHONY : PedidoDeTrocaDeTurmas.cpp.obj
+
+PedidoDeTrocaDeTurmas.i: PedidoDeTrocaDeTurmas.cpp.i
+.PHONY : PedidoDeTrocaDeTurmas.i
+
+# target to preprocess a source file
+PedidoDeTrocaDeTurmas.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/PedidoDeTrocaDeTurmas.cpp.i
+.PHONY : PedidoDeTrocaDeTurmas.cpp.i
+
+PedidoDeTrocaDeTurmas.s: PedidoDeTrocaDeTurmas.cpp.s
+.PHONY : PedidoDeTrocaDeTurmas.s
+
+# target to generate assembly for a file
+PedidoDeTrocaDeTurmas.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/PedidoDeTrocaDeTurmas.cpp.s
+.PHONY : PedidoDeTrocaDeTurmas.cpp.s
+
 ReadFiles.obj: ReadFiles.cpp.obj
 .PHONY : ReadFiles.obj
 
@@ -395,6 +419,9 @@ help:
 	@echo ... Menu.obj
 	@echo ... Menu.i
 	@echo ... Menu.s
+	@echo ... PedidoDeTrocaDeTurmas.obj
+	@echo ... PedidoDeTrocaDeTurmas.i
+	@echo ... PedidoDeTrocaDeTurmas.s
 	@echo ... ReadFiles.obj
 	@echo ... ReadFiles.i
 	@echo ... ReadFiles.s

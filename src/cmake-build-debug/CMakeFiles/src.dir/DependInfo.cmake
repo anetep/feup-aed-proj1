@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/universidade/aed/feup-aed-proj1/src/ListingBasedOnOcupation.cpp" "CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj" "gcc" "CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj.d"
   "C:/universidade/aed/feup-aed-proj1/src/LogisticaDeTurmas.cpp" "CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj" "gcc" "CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj.d"
   "C:/universidade/aed/feup-aed-proj1/src/Menu.cpp" "CMakeFiles/src.dir/Menu.cpp.obj" "gcc" "CMakeFiles/src.dir/Menu.cpp.obj.d"
+  "C:/universidade/aed/feup-aed-proj1/src/PedidoDeTrocaDeTurmas.cpp" "CMakeFiles/src.dir/PedidoDeTrocaDeTurmas.cpp.obj" "gcc" "CMakeFiles/src.dir/PedidoDeTrocaDeTurmas.cpp.obj.d"
   "C:/universidade/aed/feup-aed-proj1/src/ReadFiles.cpp" "CMakeFiles/src.dir/ReadFiles.cpp.obj" "gcc" "CMakeFiles/src.dir/ReadFiles.cpp.obj.d"
   "C:/universidade/aed/feup-aed-proj1/src/TrocaDeTurmas.cpp" "CMakeFiles/src.dir/TrocaDeTurmas.cpp.obj" "gcc" "CMakeFiles/src.dir/TrocaDeTurmas.cpp.obj.d"
   "C:/universidade/aed/feup-aed-proj1/src/Turma.cpp" "CMakeFiles/src.dir/Turma.cpp.obj" "gcc" "CMakeFiles/src.dir/Turma.cpp.obj.d"
