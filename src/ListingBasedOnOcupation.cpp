@@ -161,5 +161,20 @@ void ListingBasedOnOcupation::printNumberOfStudentsPerYear(vector<Estudante> &st
     cout << "Nr de estudantes no 1o ano: " << getYearNumberOfStudents(1, students) << endl;
     cout << "Nr de estudantes no 2o ano: " << getYearNumberOfStudents(2, students) << endl;
     cout << "Nr de estudantes no 3o ano: " << getYearNumberOfStudents(3, students) << endl;
+}
+
+void ListingBasedOnOcupation::printStudentsWithMoreThanNUcs(int n, vector<Estudante> &students){
+    vector<Estudante> studentsWithMoreThanNUcs;
+    for (auto &st : students){
+        if (st.getStudentSchedule().size() > n){
+            studentsWithMoreThanNUcs.push_back(st);
+        }
+    }
+
+    sort(studentsWithMoreThanNUcs.begin(), studentsWithMoreThanNUcs.end(), [](Estudante &x, Estudante &y) -> bool {return x.getStudentName() < y.getStudentName();});
+
+    for (auto &st : studentsWithMoreThanNUcs){
+        cout << st.getStudentName() << endl;
+    }
 
 }

@@ -31,7 +31,10 @@ public:
 
     int getYearNumberOfStudents(int year, vector<Estudante> &students);
     void printNumberOfStudentsPerYear(vector<Estudante> &students);
-    };
+
+    void printStudentsWithMoreThanNUcs(int n, vector<Estudante> &students);
+
+};
 
 
 #endif //SRC_LISTINGBASEDONOCUPATION_H

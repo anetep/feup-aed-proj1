@@ -13,15 +13,13 @@
 #include "PedidoDeTrocaDeTurmas.h"
 
 
-
-
 int main() {
 
     ReadFiles o;
     vector<Estudante> students = o.readStudentsFile();
 
     ListingBasedOnOcupation l;
-    l.printNumberOfStudentsPerYear(students);
+    l.printStudentsWithMoreThanNUcs(6, students);
 
     return 0;
 }
