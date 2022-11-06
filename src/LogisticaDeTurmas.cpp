@@ -177,14 +177,14 @@ string LogisticaDeTurmas::convertFloatToTime(float hour){
 //TODO corrigir o getStudentFromFile para receber o vector de estudantes em vez de ir buscar no ficheiro
 void LogisticaDeTurmas::printStudentSchedule(int studentCode, vector<Estudante> &students){
     Estudante stud = getStudentWithCodeX(studentCode, students);
-    vector<Aula> aulasDoLudo = turnStudentClassesToLessons(stud);
+    vector<Aula> aulas = turnStudentClassesToLessons(stud);
 
     cout << "======================   Horario do/a " << stud.getStudentName() << "  ===========================" << endl;
-    for (auto &al: aulasDoLudo){
+    for (auto &al: aulas){
         cout << "Unidade Curricular: " << al.getUcCode() << "             Turma: " << al.getClassCode() << endl;
         cout << "Dia da semana: " << al.getWeekday() << endl;
         cout << "Tipo de Aula: " << al.getTypeOfClass() << endl;
-        cout << "Hora de Inicio: " << convertFloatToTime(al.getStartHour()) << "              Hora de fim: " << al.getEndHour() << endl;
+        cout << "Hora de Inicio: " << convertFloatToTime(al.getStartHour()) << "              Hora de fim: " << convertFloatToTime(al.getEndHour()) << endl;
         cout << "Duracao: " << al.getDuration() << endl;
         cout << " ------------------------------- " << endl;
     }
