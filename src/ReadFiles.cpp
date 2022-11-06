@@ -69,7 +69,7 @@ vector<Estudante> ReadFiles::joinStudentClases(vector <Estudante> &fromFile){
 }
 
 vector<Aula> ReadFiles::readClassesFile(){
-    ifstream in("classes.txt");
+    ifstream in("helper_classes.txt");
     string line;
 
     char* dup;
@@ -89,6 +89,8 @@ vector<Aula> ReadFiles::readClassesFile(){
             Aula r(cl, uc, day, start, dur, type);
             aulas.push_back(r);
         }
+    }else{
+        cerr << "Can't open classes file, the name given doesn't exist" << endl;
     }
 
     in.close();
@@ -114,6 +116,8 @@ vector<Turma> ReadFiles::readClassesPerUcFile(){
             Turma r(ucCode, classCode);
             turmas.push_back(r);
         }
+    }else{
+        cerr << "Can't open classes per uc file, the name given doesn't exist" << endl;
     }
 
     in.close();
