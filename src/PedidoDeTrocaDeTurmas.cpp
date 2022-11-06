@@ -5,14 +5,14 @@
 #include "PedidoDeTrocaDeTurmas.h"
 
 PedidoDeTrocaDeTurmas::PedidoDeTrocaDeTurmas(){
-    this->studentToChange = Estudante();
+    this->studentToChangeCode = 0;
     this->oldClass = Turma();
     this->newClass = Turma();
 
 }
 
-PedidoDeTrocaDeTurmas::PedidoDeTrocaDeTurmas(Estudante st, Turma oldCl, Turma newCl){
-    this->studentToChange = st;
+PedidoDeTrocaDeTurmas::PedidoDeTrocaDeTurmas(int st, Turma oldCl, Turma newCl){
+    this->studentToChangeCode = st;
     this->oldClass = oldCl;
     this->newClass = newCl;
 }
@@ -26,8 +26,8 @@ PedidoDeTrocaDeTurmas::PedidoDeTrocaDeTurmas(Estudante st, Turma oldCl, Turma ne
 }*/
 
 
-Estudante PedidoDeTrocaDeTurmas::getStudentToChange() const{
-    return studentToChange;
+int PedidoDeTrocaDeTurmas::getStudentToChangeCode() const{
+    return studentToChangeCode;
 }
 
 Turma PedidoDeTrocaDeTurmas::getOldClass() const{
@@ -38,8 +38,8 @@ Turma PedidoDeTrocaDeTurmas::getNewClass() const{
     return newClass;
 }
 
-void PedidoDeTrocaDeTurmas::setStudentToChange(Estudante st){
-    this->studentToChange = st;
+void PedidoDeTrocaDeTurmas::setStudentToChange(int st){
+    this->studentToChangeCode = st;
 }
 void PedidoDeTrocaDeTurmas::setOldClass(Turma cl){
     this->oldClass = cl;

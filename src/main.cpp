@@ -27,9 +27,15 @@ bool verifyIfStudentCanChangeClass(int studentCode, string oldUc, string oldClas
 }
 
 // retorna o estudante com as turmas trocadas ou não
-vector<Estudante> changeStudentClass(int studentCode, string oldUc, string oldClass, string newUc, string newClass, vector<Estudante> &students){
+vector<Estudante> changeStudentClass(PedidoDeTrocaDeTurmas &p, vector<Estudante> &students){
     TrocaDeTurmas t;
     LogisticaDeTurmas l;
+
+    int studentCode = p.getStudentToChangeCode();
+    string oldUc = p.getOldClass().getUcCode();
+    string oldClass = p.getOldClass().getClassCode();
+    string newUc = p.getNewClass().getUcCode();
+    string newClass = p.getNewClass().getClassCode();
 
     if (!verifyIfStudentCanChangeClass(studentCode, oldUc, oldClass, newUc, newClass, students)){
         cerr << "Operacao anulada!! Nao pode mudar o estudante da turma " << oldClass << "da uc " << oldUc
@@ -51,12 +57,21 @@ int main() {
     TrocaDeTurmas t;
     vector<Estudante> students = o.readStudentsFile();
 
+
+    PedidoDeTrocaDeTurmas p1(201071557, Turma("L.EIC025", "3LEIC08"), Turma("L.EIC001", "1LEIC12")); //Carminho
+    PedidoDeTrocaDeTurmas p2(202031607, Turma("L.EIC025", "3LEIC08"), Turma("L.EIC001", "1LEIC12")); // Gisela
+    PedidoDeTrocaDeTurmas p3(201071357, Turma("L.EIC025", "3LEIC08"), Turma("L.EIC001", "1LEIC12")); //Anete
+
     l.printStudentSchedule(201071557, students);
 
-    //vector<Estudante> res = t.addStudentToUcAndClass(201071557, "L.EIC023", "3LEIC08", students);
-    //t.removeStudentFromUcAndClass(201071557, "L.EIC025", "3LEIC08", students);
+    queue<PedidoDeTrocaDeTurmas> pedidos;
+    pedidos.push(p1);
+    pedidos.push(p2);
+    pedidos.push(p3);
 
-    vector<Estudante> res = changeStudentClass(201071557, "L.EIC025", "3LEIC08" , "L.EIC001", "1LEIC12", students);
+    vector<Estudante> res = changeStudentClass(pedidos.front(), students);
+
+    vector<Estudante> res2 = changeStudentClass(pedidos.front(), students);
     cout << "============================" << endl;
 
     l.printStudentSchedule(201071557, res);
