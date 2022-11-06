@@ -150,3 +150,39 @@ vector<Estudante> TrocaDeTurmas::removeStudentFromUcAndClass(int studentCode, st
     }
     return novo;
 }
+
+// não recebe por refêrencia para não mudar o original
+// retorna true se o estudante pode trocar as turmas
+bool TrocaDeTurmas::verifyIfStudentCanChangeClass(int studentCode, string oldUc, string oldClass, string newUc, string newClass, vector<Estudante> students){
+    vector<Estudante> oldUcAndClassRemoved = removeStudentFromUcAndClass(studentCode, oldUc, oldClass, students);
+
+    if (getClassOccupation(newUc, newClass, oldUcAndClassRemoved) >= 30) return false;
+    if (!verifyClassesEquilibrium(oldUc, oldClass, newUc, newClass, oldUcAndClassRemoved)) return false;
+    if (verifyScheduleSobreposion(studentCode, newUc, newClass, oldUcAndClassRemoved)) return false;
+
+    return true;
+}
+
+// retorna o estudante com as turmas trocadas ou não
+vector<Estudante> TrocaDeTurmas::changeStudentClass(PedidoDeTrocaDeTurmas &p, vector<Estudante> &students){
+    LogisticaDeTurmas l;
+
+    int studentCode = p.getStudentToChangeCode();
+    string oldUc = p.getOldClass().getUcCode();
+    string oldClass = p.getOldClass().getClassCode();
+    string newUc = p.getNewClass().getUcCode();
+    string newClass = p.getNewClass().getClassCode();
+
+    if (!verifyIfStudentCanChangeClass(studentCode, oldUc, oldClass, newUc, newClass, students)){
+        cerr << "Operacao anulada!! Nao pode mudar o estudante da turma " << oldClass << "da uc " << oldUc
+             << " para a turma " << newClass << "da uc " << newUc << " porque ha conflitos no horario." << endl;
+        return students;
+    }
+
+    vector<Estudante> oldUcAndClassRemoved = removeStudentFromUcAndClass(studentCode, oldUc, oldClass, students);
+    vector<Estudante> result = addStudentToUcAndClass(studentCode, newUc, newClass, oldUcAndClassRemoved);
+
+    return result;
+}
+
+

@@ -7,6 +7,7 @@
 
 #include "Estudante.h"
 #include "ReadFiles.h"
+#include "PedidoDeTrocaDeTurmas.h"
 #include "LogisticaDeTurmas.h"
 
 
@@ -27,7 +28,10 @@ public:
 
     vector<Estudante> removeStudentFromUcAndClass(int studentCode, string ucCode,string classCode, vector<Estudante> &estudantes);
 
-};
+    bool verifyIfStudentCanChangeClass(int studentCode, string oldUc, string oldClass, string newUc, string newClass, vector<Estudante> students);
+    vector<Estudante> changeStudentClass(PedidoDeTrocaDeTurmas &p, vector<Estudante> &students);
+
+    };
 
 
 #endif //SRC_TROCADETURMAS_H
