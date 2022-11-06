@@ -9,6 +9,12 @@
 #define SRC_MENU_H
 
 #include "ReadFiles.h"
+#include "LogisticaDeTurmas.h"
+#include "TrocaDeTurmas.h"
+#include "ListingBasedOnOcupation.h"
+#include "PedidoDeTrocaDeTurmas.h"
+#include "Aula.h"
+#include "Estudante.h"
 using namespace std;
 
 /**

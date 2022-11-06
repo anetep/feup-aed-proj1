@@ -158,9 +158,12 @@ int ListingBasedOnOcupation::getYearNumberOfStudents(int year, vector<Estudante>
 
 void ListingBasedOnOcupation::printNumberOfStudentsPerYear(vector<Estudante> &students){
 
+    cout << "========== Numero de alunos inscritos em cada ano ============" << endl;
     cout << "Nr de estudantes no 1o ano: " << getYearNumberOfStudents(1, students) << endl;
     cout << "Nr de estudantes no 2o ano: " << getYearNumberOfStudents(2, students) << endl;
     cout << "Nr de estudantes no 3o ano: " << getYearNumberOfStudents(3, students) << endl;
+    cout << "------------------------------------------------------------------------" << endl;
+
 }
 
 void ListingBasedOnOcupation::printStudentsWithMoreThanNUcs(int n, vector<Estudante> &students){

@@ -69,7 +69,7 @@ vector<Estudante> ReadFiles::joinStudentClases(vector <Estudante> &fromFile){
 }
 
 vector<Aula> ReadFiles::readClassesFile(){
-    ifstream in("helper_classes.txt");
+    ifstream in("classes.txt");
     string line;
 
     char* dup;
