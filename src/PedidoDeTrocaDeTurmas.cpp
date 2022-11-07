@@ -17,14 +17,6 @@ PedidoDeTrocaDeTurmas::PedidoDeTrocaDeTurmas(int st, Turma oldCl, Turma newCl){
     this->newClass = newCl;
 }
 
-// Para alterar um conjunto de turmas/UCs.
-/*PedidoDeTrocaDeTurmas::PedidoDeTrocaDeTurmas(Estudante st, Turma oldCl, Turma newCl, list<Turma> classes){
-    this->studentToChange = st;
-    this->oldClass = oldCl;
-    this->newClass = newCl;
-    this->classesToChange = classes;
-}*/
-
 
 int PedidoDeTrocaDeTurmas::getStudentToChangeCode() const{
     return studentToChangeCode;

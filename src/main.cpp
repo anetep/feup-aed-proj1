@@ -14,6 +14,6 @@
 int main() {
     Menu m;
     m.showGeneralMenu();
-    
+
     return 0;
 }
