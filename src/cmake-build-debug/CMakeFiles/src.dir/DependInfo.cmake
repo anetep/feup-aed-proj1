@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/universidade/aed/feup-aed-proj1/src/Aula.cpp" "CMakeFiles/src.dir/Aula.cpp.obj" "gcc" "CMakeFiles/src.dir/Aula.cpp.obj.d"
-  "C:/universidade/aed/feup-aed-proj1/src/BinarySearchTree.cpp" "CMakeFiles/src.dir/BinarySearchTree.cpp.obj" "gcc" "CMakeFiles/src.dir/BinarySearchTree.cpp.obj.d"
   "C:/universidade/aed/feup-aed-proj1/src/Estudante.cpp" "CMakeFiles/src.dir/Estudante.cpp.obj" "gcc" "CMakeFiles/src.dir/Estudante.cpp.obj.d"
   "C:/universidade/aed/feup-aed-proj1/src/ListingBasedOnOcupation.cpp" "CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj" "gcc" "CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj.d"
   "C:/universidade/aed/feup-aed-proj1/src/LogisticaDeTurmas.cpp" "CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj" "gcc" "CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj.d"

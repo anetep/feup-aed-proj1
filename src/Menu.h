@@ -61,7 +61,7 @@ public:
     /**
     *   \brief Função que exibe o Menu principal
     */
-    int showGeneralMenu();
+    void showGeneralMenu();
 
 };
 

@@ -152,30 +152,6 @@ Aula.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/Aula.cpp.s
 .PHONY : Aula.cpp.s
 
-BinarySearchTree.obj: BinarySearchTree.cpp.obj
-.PHONY : BinarySearchTree.obj
-
-# target to build an object file
-BinarySearchTree.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/BinarySearchTree.cpp.obj
-.PHONY : BinarySearchTree.cpp.obj
-
-BinarySearchTree.i: BinarySearchTree.cpp.i
-.PHONY : BinarySearchTree.i
-
-# target to preprocess a source file
-BinarySearchTree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/BinarySearchTree.cpp.i
-.PHONY : BinarySearchTree.cpp.i
-
-BinarySearchTree.s: BinarySearchTree.cpp.s
-.PHONY : BinarySearchTree.s
-
-# target to generate assembly for a file
-BinarySearchTree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\src.dir\build.make CMakeFiles/src.dir/BinarySearchTree.cpp.s
-.PHONY : BinarySearchTree.cpp.s
-
 Estudante.obj: Estudante.cpp.obj
 .PHONY : Estudante.obj
 
@@ -404,9 +380,6 @@ help:
 	@echo ... Aula.obj
 	@echo ... Aula.i
 	@echo ... Aula.s
-	@echo ... BinarySearchTree.obj
-	@echo ... BinarySearchTree.i
-	@echo ... BinarySearchTree.s
 	@echo ... Estudante.obj
 	@echo ... Estudante.i
 	@echo ... Estudante.s

@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/src.dir/Aula.cpp.obj"
   "CMakeFiles/src.dir/Aula.cpp.obj.d"
-  "CMakeFiles/src.dir/BinarySearchTree.cpp.obj"
-  "CMakeFiles/src.dir/BinarySearchTree.cpp.obj.d"
   "CMakeFiles/src.dir/Estudante.cpp.obj"
   "CMakeFiles/src.dir/Estudante.cpp.obj.d"
   "CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj"

@@ -152,24 +152,10 @@ CMakeFiles/src.dir/LogisticaDeTurmas.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/LogisticaDeTurmas.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\universidade\aed\feup-aed-proj1\src\LogisticaDeTurmas.cpp -o CMakeFiles\src.dir\LogisticaDeTurmas.cpp.s
 
-CMakeFiles/src.dir/BinarySearchTree.cpp.obj: CMakeFiles/src.dir/flags.make
-CMakeFiles/src.dir/BinarySearchTree.cpp.obj: ../BinarySearchTree.cpp
-CMakeFiles/src.dir/BinarySearchTree.cpp.obj: CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\universidade\aed\feup-aed-proj1\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/src.dir/BinarySearchTree.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/src.dir/BinarySearchTree.cpp.obj -MF CMakeFiles\src.dir\BinarySearchTree.cpp.obj.d -o CMakeFiles\src.dir\BinarySearchTree.cpp.obj -c C:\universidade\aed\feup-aed-proj1\src\BinarySearchTree.cpp
-
-CMakeFiles/src.dir/BinarySearchTree.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/BinarySearchTree.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\universidade\aed\feup-aed-proj1\src\BinarySearchTree.cpp > CMakeFiles\src.dir\BinarySearchTree.cpp.i
-
-CMakeFiles/src.dir/BinarySearchTree.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/BinarySearchTree.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\universidade\aed\feup-aed-proj1\src\BinarySearchTree.cpp -o CMakeFiles\src.dir\BinarySearchTree.cpp.s
-
 CMakeFiles/src.dir/ReadFiles.cpp.obj: CMakeFiles/src.dir/flags.make
 CMakeFiles/src.dir/ReadFiles.cpp.obj: ../ReadFiles.cpp
 CMakeFiles/src.dir/ReadFiles.cpp.obj: CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\universidade\aed\feup-aed-proj1\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/src.dir/ReadFiles.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\universidade\aed\feup-aed-proj1\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/src.dir/ReadFiles.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/src.dir/ReadFiles.cpp.obj -MF CMakeFiles\src.dir\ReadFiles.cpp.obj.d -o CMakeFiles\src.dir\ReadFiles.cpp.obj -c C:\universidade\aed\feup-aed-proj1\src\ReadFiles.cpp
 
 CMakeFiles/src.dir/ReadFiles.cpp.i: cmake_force
@@ -183,7 +169,7 @@ CMakeFiles/src.dir/ReadFiles.cpp.s: cmake_force
 CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj: CMakeFiles/src.dir/flags.make
 CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj: ../ListingBasedOnOcupation.cpp
 CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj: CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\universidade\aed\feup-aed-proj1\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\universidade\aed\feup-aed-proj1\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj -MF CMakeFiles\src.dir\ListingBasedOnOcupation.cpp.obj.d -o CMakeFiles\src.dir\ListingBasedOnOcupation.cpp.obj -c C:\universidade\aed\feup-aed-proj1\src\ListingBasedOnOcupation.cpp
 
 CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.i: cmake_force
@@ -197,7 +183,7 @@ CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.s: cmake_force
 CMakeFiles/src.dir/TrocaDeTurmas.cpp.obj: CMakeFiles/src.dir/flags.make
 CMakeFiles/src.dir/TrocaDeTurmas.cpp.obj: ../TrocaDeTurmas.cpp
 CMakeFiles/src.dir/TrocaDeTurmas.cpp.obj: CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\universidade\aed\feup-aed-proj1\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/src.dir/TrocaDeTurmas.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\universidade\aed\feup-aed-proj1\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/src.dir/TrocaDeTurmas.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/src.dir/TrocaDeTurmas.cpp.obj -MF CMakeFiles\src.dir\TrocaDeTurmas.cpp.obj.d -o CMakeFiles\src.dir\TrocaDeTurmas.cpp.obj -c C:\universidade\aed\feup-aed-proj1\src\TrocaDeTurmas.cpp
 
 CMakeFiles/src.dir/TrocaDeTurmas.cpp.i: cmake_force
@@ -211,7 +197,7 @@ CMakeFiles/src.dir/TrocaDeTurmas.cpp.s: cmake_force
 CMakeFiles/src.dir/PedidoDeTrocaDeTurmas.cpp.obj: CMakeFiles/src.dir/flags.make
 CMakeFiles/src.dir/PedidoDeTrocaDeTurmas.cpp.obj: ../PedidoDeTrocaDeTurmas.cpp
 CMakeFiles/src.dir/PedidoDeTrocaDeTurmas.cpp.obj: CMakeFiles/src.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\universidade\aed\feup-aed-proj1\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/src.dir/PedidoDeTrocaDeTurmas.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\universidade\aed\feup-aed-proj1\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/src.dir/PedidoDeTrocaDeTurmas.cpp.obj"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/src.dir/PedidoDeTrocaDeTurmas.cpp.obj -MF CMakeFiles\src.dir\PedidoDeTrocaDeTurmas.cpp.obj.d -o CMakeFiles\src.dir\PedidoDeTrocaDeTurmas.cpp.obj -c C:\universidade\aed\feup-aed-proj1\src\PedidoDeTrocaDeTurmas.cpp
 
 CMakeFiles/src.dir/PedidoDeTrocaDeTurmas.cpp.i: cmake_force
@@ -230,7 +216,6 @@ src_OBJECTS = \
 "CMakeFiles/src.dir/Turma.cpp.obj" \
 "CMakeFiles/src.dir/Aula.cpp.obj" \
 "CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj" \
-"CMakeFiles/src.dir/BinarySearchTree.cpp.obj" \
 "CMakeFiles/src.dir/ReadFiles.cpp.obj" \
 "CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj" \
 "CMakeFiles/src.dir/TrocaDeTurmas.cpp.obj" \
@@ -245,7 +230,6 @@ src.exe: CMakeFiles/src.dir/Estudante.cpp.obj
 src.exe: CMakeFiles/src.dir/Turma.cpp.obj
 src.exe: CMakeFiles/src.dir/Aula.cpp.obj
 src.exe: CMakeFiles/src.dir/LogisticaDeTurmas.cpp.obj
-src.exe: CMakeFiles/src.dir/BinarySearchTree.cpp.obj
 src.exe: CMakeFiles/src.dir/ReadFiles.cpp.obj
 src.exe: CMakeFiles/src.dir/ListingBasedOnOcupation.cpp.obj
 src.exe: CMakeFiles/src.dir/TrocaDeTurmas.cpp.obj
@@ -254,7 +238,7 @@ src.exe: CMakeFiles/src.dir/build.make
 src.exe: CMakeFiles/src.dir/linklibs.rsp
 src.exe: CMakeFiles/src.dir/objects1.rsp
 src.exe: CMakeFiles/src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\universidade\aed\feup-aed-proj1\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable src.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\universidade\aed\feup-aed-proj1\src\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable src.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\src.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

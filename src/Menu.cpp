@@ -245,9 +245,7 @@ void Menu::showMenuStudentSomeUCs() {
     listing.printStudentsWithMoreThanNUcs(num, students);
 }
 
-int Menu::showGeneralMenu(){
-
-
+void Menu::showGeneralMenu(){
     int escolha1;
     cout << "O. Sair\n"
          << "1. Listing de estudantes inscritos em pelo menos uma unidade curricular\n"
@@ -265,7 +263,7 @@ int Menu::showGeneralMenu(){
         switch (escolha1) {
             case 0:
                 cout<< "Obrigado!";
-                return 0;
+                exit(0);
             case 1:
                 cout << "escolheu: 1.Listing de estudantes\n";
                 cout << "-------------------------\n";

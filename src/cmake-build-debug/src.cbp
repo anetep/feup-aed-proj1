@@ -88,12 +88,6 @@
 		<Unit filename="C:/universidade/aed/feup-aed-proj1/src/Aula.h">
 			<Option target="src"/>
 		</Unit>
-		<Unit filename="C:/universidade/aed/feup-aed-proj1/src/BinarySearchTree.cpp">
-			<Option target="src"/>
-		</Unit>
-		<Unit filename="C:/universidade/aed/feup-aed-proj1/src/BinarySearchTree.h">
-			<Option target="src"/>
-		</Unit>
 		<Unit filename="C:/universidade/aed/feup-aed-proj1/src/Estudante.cpp">
 			<Option target="src"/>
 		</Unit>
